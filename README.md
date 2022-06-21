@@ -1,2 +1,2 @@
-# MathisGauthey.github.io
+# mathisgauthey.github.io
 My GitHub Pages website.
