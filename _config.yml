@@ -1,6 +1,6 @@
 theme: jekyll-theme-minimal
 title: Mathis Gauthey Homepage
-description: Mechanical engineer switching to computer science. I love hiking in the wilderness as much as I love my lines of code.
+description: I believe in a world where every software has an open-source alternative maintained by a group of great people to improve everyone's life, and not a company seeking only profits with high margins.
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
