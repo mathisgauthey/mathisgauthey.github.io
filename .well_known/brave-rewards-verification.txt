@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: mathisgauthey.github.io
+Token: 25efb3462ca8ab5b49e15d251c49769b0c2e512b1cd171f3904d5c2bf3e3d54a
