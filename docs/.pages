@@ -1,0 +1,10 @@
+nav:
+- Home:
+  - index.md
+- projects
+- guides
+- blog
+- tags
+- about
+- contact
+- support
