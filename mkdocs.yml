@@ -12,7 +12,7 @@ theme:
 
   icon:
     repo: fontawesome/brands/github
-  logo: "assets/logo.png"
+    logo: octicons/code-review-24
   favicon: "assets/favicon.ico"
 
   features:
