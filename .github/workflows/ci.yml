@@ -35,4 +35,5 @@ jobs:
             - run: pip install mkdocs-callouts
             - run: |
                   export MKDOCS_GIT_COMMITTERS_APIKEY=${{ secrets.MKDOCS_GIT_COMMITTERS_APIKEY }}
+                  export GOOGLE_ANALYTICS_KEY=${{ secrets.GOOGLE_ANALYTICS_KEY }}
                   mkdocs gh-deploy --force
