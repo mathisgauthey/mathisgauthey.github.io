@@ -1,0 +1,9 @@
+# Home
+
+Welcome to my personal website. I showcase my projets and share my knowledge here. I hope you find something useful down there. Enjoy your stay! ✌️
+
+- If you want to learn more [about me](about/index.md)...
+- If you want to [contact me](contact/index.md)...
+- If you want to [support me](support/index.md)...
+
+---
