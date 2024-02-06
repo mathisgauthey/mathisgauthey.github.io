@@ -1,0 +1,2200 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="On this post, I'll provide a full guide on how to create an encrypted and independent dual boot setup using two drives.">
+      
+      
+        <meta name="author" content="Mathis Gauthey">
+      
+      
+        <link rel="canonical" href="https://mathis.gauthey.github.io/how-to-do-an-encrypted-dual-boot-using-windows-11-and-linux-mint/">
+      
+      
+        <link rel="prev" href="../how-to-search-efficiently-online/">
+      
+      
+        <link rel="next" href="../windows-post-install-script/">
+      
+      
+      <link rel="icon" href="../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.7">
+    
+    
+      
+        <title>How to Do an Encrypted Dual Boot Using Windows 11 and Linux Mint - Mathis Gauthey's Website</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","***REMOVED***"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","***REMOVED***",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=***REMOVED***",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="How to Do an Encrypted Dual Boot Using Windows 11 and Linux Mint - Mathis Gauthey's Website" >
+      
+        <meta  property="og:description"  content="On this post, I'll provide a full guide on how to create an encrypted and independent dual boot setup using two drives." >
+      
+        <meta  property="og:image"  content="https://mathis.gauthey.github.io/assets/images/social/posts/How to Do an Encrypted Dual Boot Using Windows 11 and Linux Mint.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://mathis.gauthey.github.io/how-to-do-an-encrypted-dual-boot-using-windows-11-and-linux-mint/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="How to Do an Encrypted Dual Boot Using Windows 11 and Linux Mint - Mathis Gauthey's Website" >
+      
+        <meta  name="twitter:description"  content="On this post, I'll provide a full guide on how to create an encrypted and independent dual boot setup using two drives." >
+      
+        <meta  name="twitter:image"  content="https://mathis.gauthey.github.io/assets/images/social/posts/How to Do an Encrypted Dual Boot Using Windows 11 and Linux Mint.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-to-do-an-encrypted-dual-boot-using-windows-11-and-linux-mint" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Mathis Gauthey&#39;s Website" class="md-header__button md-logo" aria-label="Mathis Gauthey's Website" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mathis Gauthey's Website
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              How to Do an Encrypted Dual Boot Using Windows 11 and Linux Mint
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mathisgauthey/mathisgauthey.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mathisgauthey/mathisgauthey.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href=".." class="md-tabs__link">
+          
+  
+    
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../projects/" class="md-tabs__link">
+          
+  
+    
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../guides/" class="md-tabs__link">
+          
+  
+    
+  
+  Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../blog/" class="md-tabs__link">
+          
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../tags/" class="md-tabs__link">
+          
+  
+    
+  
+  Tags
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../about/" class="md-tabs__link">
+          
+  
+    
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../contact/" class="md-tabs__link">
+          
+  
+    
+  
+  Contact
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../support/" class="md-tabs__link">
+          
+  
+    
+  
+  Support
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Mathis Gauthey&#39;s Website" class="md-nav__button md-logo" aria-label="Mathis Gauthey's Website" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    Mathis Gauthey's Website
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mathisgauthey/mathisgauthey.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mathisgauthey/mathisgauthey.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href=".." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Archive
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2023/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2022/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2022
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2021/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2021
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2020/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2020
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2019/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2019
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Categories
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    blog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    guides
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../projects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../projects/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../guides/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Guides
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../blog/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../tags/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Tags
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Tags
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../about/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../contact/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Contact
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../support/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Support
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Support
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objective
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#before-doing-anything" class="md-nav__link">
+    <span class="md-ellipsis">
+      Before Doing Anything
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Before Doing Anything">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-and-disable-bitlocker-encryption-to-make-sure-it-works-well" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable and Disable Bitlocker Encryption to Make Sure it Works Well
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup Preparation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup Preparation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preparing-your-windows-setup-for-the-dual-boot-experience" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparing Your Windows Setup for the Dual Boot Experience
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preparing-your-linux-mint-installation-medium" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparing Your Linux Mint Installation Medium
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beginning-the-dual-boot-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beginning the Dual-boot Process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Beginning the Dual-boot Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows-hard-drive-disconnection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows Hard-drive Disconnection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-linux-mint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Linux Mint
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#after-installing-linux-mint-a-few-things-to-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      After Installing Linux Mint : A Few Things to Change
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="After Installing Linux Mint : A Few Things to Change">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-beautiful-grub-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Beautiful Grub Menu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-grub-menu-that-remembers-the-last-os-you-chose" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Grub Menu That Remembers the Last OS You Chose
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solve-timezone-issues-when-you-switch-os" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solve Timezone Issues When You Switch OS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prepare-group-policies-for-windows-encryption" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prepare Group Policies for Windows Encryption
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allow-complexe-password-and-not-just-pin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allow Complexe Password and Not Just Pin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-a-password-at-startup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add a Password at Startup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Add a Password at Startup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-one-enable-bitlocker-if-you-havent-already" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step One: Enable BitLocker (If You Haven’t Already)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-two-enable-the-startup-pin-in-group-policy-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step Two: Enable the Startup PIN in Group Policy Editor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-three-add-a-pin-to-your-drive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step Three: Add a PIN to Your Drive
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-change-your-bitlocker-pin" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Change Your BitLocker PIN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-remove-the-pin-requirement" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Remove the PIN Requirement
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prevent-bitlocker-from-asking-for-your-recovery-code-everytime-you-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prevent Bitlocker From Asking for Your Recovery Code Everytime You Boot
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activate-bitlocker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activate Bitlocker
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href=".." class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://github.com/mathisgauthey.png" alt="Mathis Gauthey">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          <a href="https://github.com/mathisgauthey">Mathis Gauthey</a>
+                        
+                      </strong>
+                      <br>
+                      Website Owner
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
+                        <time datetime="2022-11-07 11:09:05+01:00" class="md-ellipsis">November 7, 2022</time>
+                      </div>
+                    </li>
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 13h1.5v2.82l2.44 1.41-.75 1.3L15 16.69V13m4-5H5v11h4.67c-.43-.91-.67-1.93-.67-3a7 7 0 0 1 7-7c1.07 0 2.09.24 3 .67V8M5 21a2 2 0 0 1-2-2V5c0-1.11.89-2 2-2h1V1h2v2h8V1h2v2h1a2 2 0 0 1 2 2v6.1c1.24 1.26 2 2.99 2 4.9a7 7 0 0 1-7 7c-1.91 0-3.64-.76-4.9-2H5m11-9.85A4.85 4.85 0 0 0 11.15 16c0 2.68 2.17 4.85 4.85 4.85A4.85 4.85 0 0 0 20.85 16c0-2.68-2.17-4.85-4.85-4.85Z"/></svg>
+                          <time datetime="2024-02-06 11:13:13+01:00" class="md-ellipsis">February 6, 2024</time>
+                        </div>
+                      </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3H9m3 2 4 13 3-1-4-13-3 1M5 5v13h3V5H5M3 19v2h18v-2H3Z"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../guides/">guides</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              12 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+  
+
+<nav class="md-tags" >
+  
+    
+    
+    
+      <a href="../tags/#guide" class="md-tag">guide</a>
+    
+  
+    
+    
+    
+      <a href="../tags/#windows" class="md-tag">windows</a>
+    
+  
+    
+    
+    
+      <a href="../tags/#linux" class="md-tag">linux</a>
+    
+  
+    
+    
+    
+      <a href="../tags/#dual-boot" class="md-tag">dual-boot</a>
+    
+  
+    
+    
+    
+      <a href="../tags/#encrypted" class="md-tag">encrypted</a>
+    
+  
+</nav>
+
+
+  
+    <a href="https://github.com/mathisgauthey/mathisgauthey.github.io/edit/main/docs/posts/How to Do an Encrypted Dual Boot Using Windows 11 and Linux Mint.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/mathisgauthey/mathisgauthey.github.io/raw/main/docs/posts/How to Do an Encrypted Dual Boot Using Windows 11 and Linux Mint.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
+    </a>
+  
+
+
+<h1 id="how-to-do-an-encrypted-dual-boot-using-windows-11-and-linux-mint">How to Do an Encrypted Dual Boot Using Windows 11 and Linux Mint</h1>
+<p>On this post, I'll provide a full guide on how to create an encrypted and independent dual boot setup using two drives.</p>
+<!-- more -->
+
+<h2 id="objective">Objective</h2>
+<p>Our goal is to create a completely independant encrypted dual boot setup for Linux Mint and Windows 11. How is it independant ? We'll make sure that GRUB (Linux Bootloader) will install itself on the Linux Drive, and won't be on your Windows drive with Windows Bootloader. That means you'll be able to remove any of the two drives and use them on any other machine you want.</p>
+<p>The setup will work as follow :</p>
+<p><img alt="2023-03-09_13-47-11_dual_boot_schema.png" src="../images/2023-03-09_13-47-11_dual_boot_schema.png" /></p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://itsfoss.com/dual-boot-ubuntu-windows-bitlocker/">Dual Booting Ubuntu With Windows 10 Pro With BitLocker Encryption - It's FOSS</a></li>
+<li><a href="https://superuser.com/questions/1287714/dual-boot-windows-linux-with-encryption">Dual boot Windows + Linux with encryption - Super User</a></li>
+<li><a href="https://itsfoss.community/t/how-to-encrypt-a-dual-boot-setup-with-two-drives-ssd/9272/2">How to encrypt a dual boot setup with two drives (SSD) - General Linux Question - It's FOSS Community</a></li>
+<li><a href="https://forums.linuxmint.com/viewtopic.php?f=46&amp;t=376911&amp;p=2197098#p2197098">How to encrypt a dual boot setup with two drives (SSD) - Linux Mint Forums</a></li>
+<li><a href="https://forums.linuxmint.com/viewtopic.php?f=46&amp;t=375199&amp;p=2185321#p2185321">[SOLVED] Dual booting Mint on a second drive independently. - Linux Mint Forums</a></li>
+<li>Special thanks to AndyMH who helped me on Reddit, and kept helping me by mail and on the <a href="https://forums.linuxmint.com/index.php">Linux Mint Forums</a>.</li>
+</ul>
+<h2 id="before-doing-anything">Before Doing Anything</h2>
+<h3 id="requirement">Requirement</h3>
+<p>In order to follow this guide you need :</p>
+<ul>
+<li>Two drives (SSD<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> or HDD,<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> it doesn't matter at all). Verify that the second drive you just installed is recognized by Windows by opening the Windows File Explorer.</li>
+</ul>
+<blockquote>
+<p>From now on during this guide, your C drive will be the one referenced as your Windows Drive. And your D drive as the one that will get Linux Mint.</p>
+</blockquote>
+<ul>
+<li>Windows 11 Pro Edition : Cheap keys can be bought at Cdiscount for ~1€. That also means you need a motherboard that supports TPM 2.0 in order to have Windows 11 (At least that's what I read on the internet).</li>
+</ul>
+<blockquote>
+<p>Alternative path : Using VeraCrypt instead of Bitlocker as an encrypting software for the Windows side of the dual boot. I don't know anything about it, but you might pioneer something.</p>
+</blockquote>
+<ul>
+<li>A USB Key of at least 16 gb (I don't know exactly, it just worked for me with that size).</li>
+<li>A computer that might be compatible with Linux thanks to your hardware. If you want to verify, you can check with :<ul>
+<li><a href="https://community.linuxmint.com/hardware/welcome">Linux Mint - Community</a> : Linux Mint known compatible devices.</li>
+<li><a href="https://ubuntu.com/certified">Certified hardware | Ubuntu</a> : Ubuntu certified devices.</li>
+<li><a href="https://doc.ubuntu-fr.org/liste_portables_msi">Ubuntu-MSI-laptops</a> : This is an example, but there is a page for many laptop brands for instance.</li>
+</ul>
+</li>
+<li>An internet connection might help (a lot).</li>
+</ul>
+<h3 id="backup">Backup</h3>
+<p>First, <strong>backup your computer</strong>. If you follow this guide, it could work. But it might as well fail, and you'll thank your past-self if you have a backup.</p>
+<p>I am personnaly using <a href="https://www.macrium.com/reflectfree">Macrium Software | Reflect Free Edition</a> and an eHDD (<em>external hard drive</em>) to create a full image backup in case things get messy. Whatever you choose to do, do a backup.</p>
+<h3 id="enable-and-disable-bitlocker-encryption-to-make-sure-it-works-well">Enable and Disable Bitlocker Encryption to Make Sure it Works Well</h3>
+<p><strong>Before doing anything, we want to make sure that Bitlocker is working properly.</strong></p>
+<ul>
+<li>Search on Windows for "Manage Bitlocker".</li>
+<li>Encrypt your C Drive. Use the "Encrypt entire drive" option along with the "New encryption mode" that will use your TPM.</li>
+<li>Backup your recovery key. Print it, put it in the cloud, do whatever you want, but keep it.</li>
+</ul>
+<blockquote>
+<p><strong>Be careful. Every time you'll exit the encryption wizard, the backup key is changing. So remember to back it up again if you cancelled it to prepare yourself some spaghetti.</strong></p>
+</blockquote>
+<ul>
+<li>Let the encryption process do its thing.</li>
+<li>Reboot and make sure it works.</li>
+<li>Now that ~~hopefully~~ everything works well, go back to "Manage Bitlocker" and "Turn off Bitlocker". Yes, you heard me. Do you want a safe dual boot process ? We just verified that everything works well. That's it.</li>
+</ul>
+<blockquote>
+<p>Make sure to turn if off completely. You don't want to just suspend encryption, you want to turn it off.</p>
+</blockquote>
+<p><u>Edit :</u> <em>As we will remove the Windows Drive (physically or by using some manipulation with Gparted), it should also work if you keep it Bitlocker encrypted. Or if it isn't yet encrypted. They should be completely independent anyway. But I'm a crazily paranoid man, that's why I'm putting it here.</em></p>
+<h2 id="setup-preparation">Setup Preparation</h2>
+<h3 id="preparing-your-windows-setup-for-the-dual-boot-experience">Preparing Your Windows Setup for the Dual Boot Experience</h3>
+<p>Windows has many things that could make your dual-boot setup goes wrong. That's why we'll make sure everything goes as smooth as possible by doing the following things :</p>
+<ul>
+<li>Remove <strong>fast-boot</strong> by going into the old alimentation settings of windows, choose actions when button pressed and remove fast boot, hibernate and (optional) sleep mode. Then, open a cmd as admin and type <code>powercfg -h off</code>. <em>Search for hiberfil.sys for additional information on how to deactivate fast-boot.</em></li>
+<li>Remove <strong>fast boot</strong> from the Bios as well.</li>
+<li>Remove <strong>secure-boot</strong> from your Bios.</li>
+<li>Remove <strong>Intel Fast Start</strong> from Bios.</li>
+</ul>
+<p><em>I won't be explaining much moredependentis dependent on your system. Google will be your best friend, but don't hesitate to ask for help somewhere.</em></p>
+<h3 id="preparing-your-linux-mint-installation-medium">Preparing Your Linux Mint Installation Medium</h3>
+<ul>
+<li>Follow the instructions on the Linux Mint wiki and download the .iso (<a href="https://linuxmint-installation-guide.readthedocs.io/en/latest/choose.html">Choose the right edition—Linux Mint Installation Guide documentation</a>).</li>
+<li>Verify your ISO (integrity and authenticity : <a href="https://linuxmint-installation-guide.readthedocs.io/en/latest/verify.html">Verify your ISO image—Linux Mint Installation Guide documentation</a>).</li>
+<li>Create the bootable media with Etcher (<a href="https://linuxmint-installation-guide.readthedocs.io/en/latest/burn.html">Create the bootable media—Linux Mint Installation Guide documentation</a>).</li>
+</ul>
+<p>That's it. <strong>You're ready</strong>. Things are going to become interesting now.</p>
+<h2 id="beginning-the-dual-boot-process">Beginning the Dual-boot Process</h2>
+<ul>
+<li>Shut down your laptop.</li>
+<li>Connect your USB key to the laptop and boot. It should go on Linux live by default, if not, change your boot order in your Bios.</li>
+</ul>
+<h3 id="windows-hard-drive-disconnection">Windows Hard-drive Disconnection</h3>
+<p><em>In order to create a completely independent dual-boot setup, we want to disconnect the Windows Drive before doing the Linux Mint installation. If you can physically disconnect the drive, go on, do it, and skip the following Gparted part. If you're using a laptop and/or don't want to bother, read the following.</em></p>
+<ul>
+<li>Run Gparted by searching for it in the admin section of the applications. Find your Windows disk with 4 partitions (EFI, MS reserved, C:, and a recovery partition).</li>
+</ul>
+<blockquote>
+<p>The drive may appear as nvme0n1 and the first partition as nvme0n1p1 if this is an nVME SSD. Otherwise, in linux, the first drive in the system is sda, the next sdb and so on. The first partition on a drive would be sda1, the next sda2 and so on.</p>
+</blockquote>
+<ul>
+<li>Select the EFI partition (fat32, size less than 500mb, and flags <strong>BOOT</strong> and <strong>ESP</strong> set).</li>
+<li>Select “manage flags”.</li>
+<li>Uncheck the <strong>BOOT</strong> and <strong>ESP</strong> flags.</li>
+<li>The partition will now appear with the <strong>msftdata</strong> flag.</li>
+<li>Close Gparted.</li>
+</ul>
+<h3 id="installing-linux-mint">Installing Linux Mint</h3>
+<ul>
+<li>Launch install Mint. Follow the instructions (<a href="https://linuxmint-installation-guide.readthedocs.io/en/latest/install.html">Install Linux Mint—Linux Mint Installation Guide documentation</a>). But <strong>be careful</strong>, you will need to click on "Continue testing" at the end of the installation process if you chose to disconnect the Windows Drive virtually using Gparted and flags.</li>
+</ul>
+<p><img alt="2023-03-09_19-19-01_Erase_disk_and_install_Mint.png" src="../images/2023-03-09_19-19-01_Erase_disk_and_install_Mint.png" /></p>
+<ul>
+<li>Select "Erase disk and install Linux Mint". Make sure there is no OS detected on the actual drive and that it is your second drive, and it will do his partitioning thing on the newly added drive. I think you can choose to use LVM and LUKS full disk encryption here. Do it. <strong>But be careful, maybe you keyboard setup is not the one you physically have.</strong> Type your password on the search bar to be sure!</li>
+<li>Choose a short computer and username. For instance, I'm using "MSI-GL75" as a computer name and my first name as my username. You'll thank me later.</li>
+</ul>
+<p><img alt="2023-03-09_19-26-55_encryption_process.png" src="../images/2023-03-09_19-26-55_encryption_process.png" /></p>
+<ul>
+<li>Select "Require my password to log in" and tick "Encrypt my home folder".</li>
+<li><u> <strong>Select "Continue testing" at the end of the installation process.</strong></u></li>
+<li>Run Gparted and enable back the <strong>ESP</strong> and <strong>BOOT</strong> flags on the EFI Windows partition.</li>
+<li>Reboot and go into bios settings.</li>
+<li>Put Ubuntu at the top of the list of the boot order.</li>
+<li>You should now boot immediatelyinto Linux Mint instead Grub dual-boot menu. It is normal.</li>
+<li>Open up a terminal with <code>ctrl+alt+</code> and type <code>sudo update-grub</code>. Grub config will be updated by finding the Windows EFI partition. Grub will now be working</li>
+</ul>
+<p>Now you should have a working dual-boot setup with Linux Mint encrypted. But wait a bit, we still need to encrypt Windows and change a few things.</p>
+<p>Oh, and don't forget to <strong>think about a backup for Linux Mint</strong>. You now have <strong>Macrium Reflect</strong> for Windows. There's <strong>Timeshift</strong> and <strong>Backintime</strong> that can help backing up your system files and personall files respectively.</p>
+<h2 id="after-installing-linux-mint-a-few-things-to-change">After Installing Linux Mint : A Few Things to Change</h2>
+<h3 id="a-beautiful-grub-menu">A Beautiful Grub Menu</h3>
+<p>You want a beautiful Grub boot menu like that and not just a command line type of dual-boot screen ? Follow these instructions : <a href="https://linuxmint-user-guide.readthedocs.io/en/latest/grub.html">Grub Boot Menu — Linux Mint User Guide documentation</a></p>
+<p><img alt="2023-03-09_19-19-01_Grub_menu.png" src="../images/2023-03-09_19-19-01_Grub_menu.png" /></p>
+<p>Open a terminal, and type the following command :</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>apt install --reinstall -o Dpkg::Options::=&quot;--force-confmiss&quot; grub2-theme-mint
+</span></code></pre></div>
+<p>Or if you have a high-DPI screen :</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>apt install --reinstall -o Dpkg::Options::=&quot;--force-confmiss&quot; grub2-theme-mint-2k
+</span></code></pre></div>
+<p>Don't forget to do a <code>sudo update-grub</code> afterward to update the Grub config file.</p>
+<h3 id="a-grub-menu-that-remembers-the-last-os-you-chose">A Grub Menu That Remembers the Last OS You Chose</h3>
+<p>Self-explicit.</p>
+<p>I followed <a href="https://askubuntu.com/users/30982/keepitsimpleengineer">keepitsimpleengineer</a>'s answer in this topic :</p>
+<blockquote>
+<p><a href="https://askubuntu.com/questions/52963/how-do-i-set-windows-to-boot-as-the-default-in-the-boot-loader/82965#82965">grub2 - How do I set Windows to boot as the default in the boot loader? - Ask Ubuntu</a>.</p>
+</blockquote>
+<p>You just need to open a terminal and type the following command :</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo nano -B /etc/default/grub
+</span></code></pre></div>
+<p>Change the value of <code>GRUB_DEFAULT</code> to <code>saved</code>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>GRUB_DEFAULT=saved
+</span></code></pre></div>
+<p>Enable the <a href="http://www.gnu.org/software/grub/manual/grub.html#Simple-configuration">SAVEDEFAULT functionality</a> by adding the following line bellow <code>GRUB_DEFAULT</code> :</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>GRUB_SAVEDEFAULT=true
+</span></code></pre></div>
+<p>Now you have to run</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo update-grub
+</span></code></pre></div>
+<p>to update the system generated <code>grub.cfg</code> file in the <code>/boot/grub/</code> directory.</p>
+<h3 id="solve-timezone-issues-when-you-switch-os">Solve Timezone Issues When You Switch OS</h3>
+<p>If you <a href="https://itsfoss.com/install-ubuntu-1404-dual-boot-mode-windows-8-81-uefi/">dual boot Windows and Ubuntu</a> or any other Linux distribution, you might have noticed a time difference between the two operating systems.</p>
+<p>When you <a href="https://itsfoss.com/why-use-linux/">use Linux</a>, it shows the correct time. But when you boot into Windows, it shows the wrong time. Sometimes, it is the opposite and Linux shows the wrong time and Windows has the correct time.</p>
+<p>That’s strange specially because you are connected to the internet and your date and time is set to be used automatically.</p>
+<p>Don’t worry! You are not the only one to face this issue. You can fix it by using the following command in the Linux terminal:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>timedatectl set-local-rtc 1
+</span></code></pre></div>
+<p>If you want some explanations, follow this link to get the full guide :</p>
+<blockquote>
+<p><a href="https://itsfoss.com/wrong-time-dual-boot/">[Solved] Wrong Time in Windows 10 After Dual Boot With Linux</a></p>
+</blockquote>
+<h3 id="prepare-group-policies-for-windows-encryption">Prepare Group Policies for Windows Encryption</h3>
+<h3 id="allow-complexe-password-and-not-just-pin">Allow Complexe Password and Not Just Pin</h3>
+<ul>
+<li>Open the Group Policy Editor (type <code>gpedit</code> after opening the start menu) and navigate to Administrative Templates &gt; Windows Components &gt; Bitlocker Drive Encryption &gt; Operating System Drives</li>
+<li>Enable "Allow enhanced PINS for startup" : Allows you to use a real password and not just numbers for your encryption.</li>
+</ul>
+<h3 id="add-a-password-at-startup">Add a Password at Startup</h3>
+<p>You can follow <a href="https://www.howtogeek.com/author/chrishoffman/">Chris Hoffman</a>'s guide entirely, as this is the one I used here :</p>
+<blockquote>
+<p><a href="https://www.howtogeek.com/262720/how-to-enable-a-pre-boot-bitlocker-pin-on-windows/">How to Enable a Pre-Boot BitLocker PIN on Windows</a></p>
+</blockquote>
+<h4 id="step-one-enable-bitlocker-if-you-havent-already">Step One: Enable BitLocker (If You Haven’t Already)</h4>
+<p><img alt="" src="https://www.howtogeek.com/wp-content/uploads/2016/07/img_5786ae1550c80.png?trim=1,1&amp;bg-color=000&amp;pad=1,1" /></p>
+<p>This is a BitLocker feature, so you have to use BitLocker encryption to set a pre-boot PIN. This is only available on Professional and Enterprise editions of Windows. Before you can set a PIN, you have to <a href="https://www.howtogeek.com/192894/how-to-set-up-bitlocker-encryption-on-windows/">enable BitLocker for your system drive</a>.</p>
+<p>Note that, if you go out of your way to <a href="https://www.howtogeek.com/howto/6229/how-to-use-bitlocker-on-drives-without-tpm/">enable BitLocker on a computer without a TPM</a>, you’ll be prompted to create a startup password that’s used instead of the TPM. The below steps are only necessary when enabling BitLocker on computers with TPMs, which <a href="https://www.howtogeek.com/237232/what-is-a-tpm-and-why-does-windows-need-one-for-disk-encryption/">most modern computers have</a>.</p>
+<p>If you have a Home version of Windows, you won’t be able to use BitLocker. You may have the <a href="https://www.howtogeek.com/173592/windows-8.1-will-start-encrypting-hard-drives-by-default-everything-you-need-to-know/">Device Encryption</a> feature instead, but this works differently from BitLocker and doesn’t allow you to provide a startup key.</p>
+<h4 id="step-two-enable-the-startup-pin-in-group-policy-editor">Step Two: Enable the Startup PIN in Group Policy Editor</h4>
+<p>Once you’ve enabled BitLocker, you’ll need to go out of your way to enable a PIN with it. This requires a Group Policy settings change. To open the Group Policy Editor, press Windows+R, type “gpedit.msc” into the Run dialog, and press Enter.</p>
+<p>Head to Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; BitLocker Drive Encryption &gt; Operating System Drives in the Group Policy window.</p>
+<p>Double-click the “Require Additional Authentication at Startup” Option in the right pane.</p>
+<p><img alt="" src="https://www.howtogeek.com/wp-content/uploads/2016/07/img_5786abcd0a826.png?trim=1,1&amp;bg-color=000&amp;pad=1,1" /></p>
+<p>Select “Enabled” at the top of the window here. Then, click the box under “Configure TPM Startup PIN” and select the “Require Startup PIN With TPM” option. Click “OK” to save your changes.</p>
+<p><img alt="" src="https://www.howtogeek.com/wp-content/uploads/2016/07/img_5786abfab6c70.jpg?trim=1,1&amp;bg-color=000&amp;pad=1,1" /></p>
+<h4 id="step-three-add-a-pin-to-your-drive">Step Three: Add a PIN to Your Drive</h4>
+<p>You can now use the <code>manage-bde</code> command to add the PIN to your BitLocker-encrypted drive.</p>
+<p>To do this, launch a Command Prompt window as Administrator. On Windows 10 or 8, right-click the Start button and select “Command Prompt (Admin)”. On Windows 7, find the “Command Prompt” shortcut in the Start menu, right-click it, and select “Run as Administrator”</p>
+<p>Run the following command. The below command works on your C: drive, so if you want to require a startup key for another drive, enter its drive letter instead of <code>c:</code> .</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>manage-bde -protectors -add c: -TPMAndPIN
+</span></code></pre></div>
+<p>You’ll be prompted to enter your PIN here. The next time you boot, you’ll be asked for this PIN.</p>
+<blockquote>
+<p><strong>Tip:</strong> If you see an error, run the <code>gpupdate</code> command on its own line before running the <code>manage-bde</code> command shown above. This will force Windows to apply your group policy changes.</p>
+</blockquote>
+<p><img alt="" src="https://www.howtogeek.com/wp-content/uploads/2016/07/img_5786adbd62a1e.png?trim=1,1&amp;bg-color=000&amp;pad=1,1" /></p>
+<p>To double-check whether the TPMAndPIN protector was added, you can run the following command:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>manage-bde -status
+</span></code></pre></div>
+<p>(The “Numerical Password” key protector displayed here is your recovery key.)</p>
+<p><img alt="" src="https://www.howtogeek.com/wp-content/uploads/2016/07/img_5786ad56af029.png?trim=1,1&amp;bg-color=000&amp;pad=1,1" /></p>
+<h4 id="how-to-change-your-bitlocker-pin">How to Change Your BitLocker PIN</h4>
+<p>To change the PIN in the future, open a Command Prompt window as Administrator and run the following command:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>manage-bde -changepin c:
+</span></code></pre></div>
+<p>You’ll need to type and confirm your new PIN before continuing.</p>
+<p><img alt="2023-03-09_19-26-55_Change_PIN.png" src="../images/2023-03-09_19-26-55_Change_PIN.png" /></p>
+<p><img alt="" src="https://www.howtogeek.com/pagespeed_static/1.JiBnMqyl6S.gif" /></p>
+<h4 id="how-to-remove-the-pin-requirement">How to Remove the PIN Requirement</h4>
+<p>If you change your mind and want to stop using the PIN later, you can undo this change.</p>
+<p>First, you’ll need to head to the Group Policy window and change the option back to “Allow Startup PIN With TPM”. You can’t leave the option set to “Require Startup PIN With TPM” or Windows won’t allow you to remove the PIN.</p>
+<p><img alt="2023-03-09_19-26-55_Windows_TPM_and_PIN.png" src="../images/2023-03-09_19-26-55_Windows_TPM_and_PIN.png" /></p>
+<p><img alt="" src="https://www.howtogeek.com/pagespeed_static/1.JiBnMqyl6S.gif" /></p>
+<p>Next, open a Command Prompt window as Administrator and run the following command:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>manage-bde -protectors -add c: -TPM
+</span></code></pre></div>
+<p>This will replace the “TPMandPIN” requirement with a “TPM” requirement, deleting the PIN. Your BitLocker drive will automatically unlock via your computer’s TPM when you boot.</p>
+<p><img alt="2023-03-09_19-26-55_manage_protector_TPM.png" src="../images/2023-03-09_19-26-55_manage_protector_TPM.png" /></p>
+<p><img alt="" src="https://www.howtogeek.com/pagespeed_static/1.JiBnMqyl6S.gif" /></p>
+<p>To check that this completed successfully, run the status command again:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>manage-bde -status c:
+</span></code></pre></div>
+<p><img alt="" src="https://www.howtogeek.com/pagespeed_static/1.JiBnMqyl6S.gif" /></p>
+<p><img alt="2023-03-09_19-26-55_bitlocker_protection_status.png" src="../images/2023-03-09_19-26-55_bitlocker_protection_status.png" /></p>
+<p>If you forget the PIN, you’ll need to provide the BitLocker recovery code you should have saved somewhere safe when you enabled BitLocker for your system drive.</p>
+<h3 id="prevent-bitlocker-from-asking-for-your-recovery-code-everytime-you-boot">Prevent Bitlocker From Asking for Your Recovery Code Everytime You Boot</h3>
+<p>Link to the answer by <a href="https://superuser.com/users/872535/ouk">ouk</a> :</p>
+<blockquote>
+<p><a href="https://superuser.com/questions/1278841/bitlocker-asking-for-protection-code-after-ubuntu-installation/1714144#1714144">windows 10 - BitLocker asking for protection code after Ubuntu installation - Super User</a></p>
+</blockquote>
+<ul>
+<li>Open the Group Policy Editor (type <code>gpedit</code> after opening the start menu) and navigate to Administrative Templates &gt; Windows Components &gt; Bitlocker Drive Encryption &gt; Operating System Drives</li>
+<li>Enable "Configure TPM platform validation profile for native UEFI firmware configurations" : The standard configuration includes PCR 0, 2, 4, 7 and 11. You should only keep 0, 2 and 11.<ul>
+<li>PCR 7 is disabled when Secure Boot is.</li>
+<li>PCR 4 should be disabled to allow Grub to work properly with the <code>GRUB_DEFAULT=saved</code> feature enabled.</li>
+</ul>
+</li>
+</ul>
+<h2 id="activate-bitlocker">Activate Bitlocker</h2>
+<p>Just turn on Bitlocker like before on your Windows drive, don't forget to save the recovery key because it will change, and that's it, you've done it.</p>
+<p>You can now be a proud encrypted dual-boot user. Tell it to your mom, it's quite uncommon for people to do it I guess.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Solid State Drive : <a href="https://www.wikiwand.com/en/Solid-state_drive">Solid-state drive - Wikiwand</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Hard Drive Disk : <a href="https://www.wikiwand.com/en/Hard_disk_drive">Hard disk drive - Wikiwand</a>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 6, 2024</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 6, 2024</span>
+  </span>
+
+    
+    
+    
+      
+  <span class="md-source-file__fact">
+    
+      
+  <span class="md-icon" title="Contributors">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+  </span>
+  <span>GitHub</span>
+
+    
+    <nav>
+      
+        <a href="https://github.com/mathisgauthey" class="md-author" title="@mathisgauthey">
+          
+          <img src="https://avatars.githubusercontent.com/u/46576952?v=4&size=72" alt="mathisgauthey">
+        </a>
+      
+      
+      
+    </nav>
+  </span>
+
+    
+  </aside>
+
+
+  
+
+
+  
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81Z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14Z"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              Thanks for your feedback! Help us improve this page by using our <a href="https://github.com/mathisgauthey/mathisgauthey.github.io/issues/new/?title=[Feedback]+How%20to%20Do%20an%20Encrypted%20Dual%20Boot%20Using%20Windows%2011%20and%20Linux%20Mint+-+/how-to-do-an-encrypted-dual-boot-using-windows-11-and-linux-mint/" target="_blank" rel="noopener">feedback form</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+<h2 id="__comments">Comments</h2>
+<!-- Insert generated snippet here -->
+<script
+    src="https://giscus.app/client.js"
+    data-repo="mathisgauthey/mathisgauthey.github.io"
+    data-repo-id="R_kgDOLOvRSA"
+    data-category="_"
+    data-category-id="DIC_kwDOLOvRSM4Cc_Uf"
+    data-mapping="title"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async
+></script>
+
+<!-- Synchronize Giscus theme with palette -->
+<script>
+    var giscus = document.querySelector("script[src*=giscus]");
+
+    // Set palette on initial load
+    var palette = __md_get("__palette");
+    if (palette && typeof palette.color === "object") {
+        var theme =
+            palette.color.scheme === "slate" ? "transparent_dark" : "light";
+
+        // Instruct Giscus to set theme
+        giscus.setAttribute("data-theme", theme);
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function () {
+        var ref = document.querySelector("[data-md-component=palette]");
+        ref.addEventListener("change", function () {
+            var palette = __md_get("__palette");
+            if (palette && typeof palette.color === "object") {
+                var theme =
+                    palette.color.scheme === "slate"
+                        ? "transparent_dark"
+                        : "light";
+
+                // Instruct Giscus to change theme
+                var frame = document.querySelector(".giscus-frame");
+                frame.contentWindow.postMessage(
+                    { giscus: { setConfig: { theme } } },
+                    "https://giscus.app"
+                );
+            }
+        });
+    });
+</script>
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "content.code.copy", "navigation.indexes", "navigation.top", "navigation.expand", "content.action.view", "content.action.edit"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.caa56a14.min.js"></script>
+      
+    
+  </body>
+</html>
