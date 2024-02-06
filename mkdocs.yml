@@ -69,6 +69,7 @@ plugins:
       repository: mathisgauthey/mathisgauthey.github.io
       branch: main
       enabled: !ENV [CI, false]
+      token: !ENV MKDOCS_GIT_COMMITTERS_APIKEY
   - social
   - callouts
 

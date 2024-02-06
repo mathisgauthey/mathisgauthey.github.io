@@ -33,4 +33,6 @@ jobs:
             - run: pip install mkdocs-git-committers-plugin-2
             - run: pip install "mkdocs-material[imaging]"
             - run: pip install mkdocs-callouts
-            - run: mkdocs gh-deploy --force
+            - run: |
+                  export MKDOCS_GIT_COMMITTERS_APIKEY=${{ secrets.MKDOCS_GIT_COMMITTERS_APIKEY }}
+                  mkdocs gh-deploy --force
