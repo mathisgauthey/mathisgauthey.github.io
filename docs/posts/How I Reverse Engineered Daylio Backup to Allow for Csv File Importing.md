@@ -21,7 +21,7 @@ comments: true
 
 Here's how I managed to reverse engineer the Daylio backup format to import my journal data from plain markdown notes in Obsidian.
 
-<!-- more --> [Site Unreachable](https://mathisgauthey.github.io/How%20I%20Reverse%20Engineered%20Daylio%20Backup%20to%20Allow%20for%20Csv%20File%20Importing.md/)
+<!-- more -->
 
 ## Introduction
 
