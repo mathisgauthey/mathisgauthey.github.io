@@ -14,7 +14,7 @@ comments: true
 
 Hey there ! I'm Mathis Gauthey, a 24 years old french mechanical engineer.
 
-I love science and technology, and I'm passionate about sharing my knowledge and my projects with the world. I'm also a big fan of open-source software and hardware, and I'm always looking for new ways to contribute to the community.
+I love science and technology, and I'm passionate about sharing my knowledge and projects with the world. I'm also a big fan of open-source software and hardware, and I'm always looking for new ways to contribute to the community.
 
 You can find out more about me :
 
@@ -23,3 +23,9 @@ You can find out more about me :
 - [![brand-linkedin.svg](../assets/brand-linkedin.svg) My LinkedIn profile](https://www.linkedin.com/in/mathisgauthey/)
 - [![brand-github.svg](../assets/brand-github.svg) My Github profile](https://github.com/mathisgauthey)
 - [![brand-stackoverflow.svg](../assets/brand-stackoverflow.svg) My StackOverflow profile](https://stackoverflow.com/users/18775070/mathisgauthey)
+
+<p align="center">
+    <a href="https://github.com/anuraghazra/github-readme-stats">
+        <img src="https://github-readme-stats.vercel.app/api?username=MathisGauthey&count_private=false&show_icons=true&theme=github_light" />
+    </a>
+</p>
