@@ -24,6 +24,7 @@ theme:
     - navigation.expand
     - content.action.view
     - content.action.edit
+    - navigation.footer
 
   palette:
 
