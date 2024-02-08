@@ -1,7 +1,7 @@
 site_name: Mathis Gauthey's Website
 site_author: Mathis Gauthey
 site_description: "Welcome to my personal website. I showcase my projets and share my knowledge here."
-site_url: "https://mathis.gauthey.github.io"
+site_url: "https://mathisgauthey.github.io"
 repo_url: https://github.com/mathisgauthey/mathisgauthey.github.io
 repo_name: mathisgauthey/mathisgauthey.github.io
 edit_uri: edit/main/docs/
