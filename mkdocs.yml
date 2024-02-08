@@ -5,6 +5,7 @@ site_url: "https://mathis.gauthey.github.io"
 repo_url: https://github.com/mathisgauthey/mathisgauthey.github.io
 repo_name: mathisgauthey/mathisgauthey.github.io
 edit_uri: edit/main/docs/
+copyright: Copyright © 2019-2024 Mathis Gauthey
 
 theme:
   name: material
