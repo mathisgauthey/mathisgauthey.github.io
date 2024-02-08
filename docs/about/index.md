@@ -18,11 +18,9 @@ I love science and technology, and I'm passionate about sharing my knowledge and
 
 You can find out more about me :
 
-- [![CV.svg](../assets/CV.svg) My complete resume](https://mathisgauthey.github.io/CV/)
-- [![CV-pdf.svg](../assets/CV-pdf.svg) My one-page resume](https://mathisgauthey.github.io/CV-pdf/)
+- [![CV.svg](../assets/CV.svg) My resume](https://rxresu.me/mathisgauthey/resume)
 - [![brand-linkedin.svg](../assets/brand-linkedin.svg) My LinkedIn profile](https://www.linkedin.com/in/mathisgauthey/)
 - [![brand-github.svg](../assets/brand-github.svg) My Github profile](https://github.com/mathisgauthey)
-- [![brand-stackoverflow.svg](../assets/brand-stackoverflow.svg) My StackOverflow profile](https://stackoverflow.com/users/18775070/mathisgauthey)
 
 <p align="center">
     <a href="https://github.com/anuraghazra/github-readme-stats">
