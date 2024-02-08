@@ -95,6 +95,11 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 extra:
+  social:
+    - icon: material/linkedin
+      link: https://www.linkedin.com/in/mathisgauthey/
+    - icon: material/github
+      link: https://www.github.com/mathisgauthey
   analytics:
     provider: google
     property: !ENV GOOGLE_ANALYTICS_KEY
