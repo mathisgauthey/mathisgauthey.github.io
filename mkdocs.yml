@@ -25,6 +25,7 @@ theme:
     - content.action.view
     - content.action.edit
     - navigation.footer
+    - header.autohide
 
   palette:
 
