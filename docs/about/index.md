@@ -24,6 +24,6 @@ You can find out more about me :
 
 <p align="center">
     <a href="https://github.com/anuraghazra/github-readme-stats">
-        <img src="https://github-readme-stats.vercel.app/api?username=MathisGauthey&count_private=false&show_icons=true&theme=github_light" />
+        <img src="https://github-readme-stats.vercel.app/api?username=MathisGauthey&count_private=false&show_icons=true&theme=transparent" />
     </a>
 </p>
