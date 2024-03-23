@@ -11,7 +11,7 @@ tags:
   - wood-working
 date:
   created: 2024-03-22T16:00:00+01:00
-  updated: 2024-03-23T17:41:19+01:00
+  updated: 2024-03-23T23:49:05+01:00
 share: true
 comments: true
 ---
@@ -64,7 +64,7 @@ Basically, you get components in tension and others in compressions and they wor
 
 ## The Plan
 
-I love to over-engineer things. And this won't be an exception. I wanted to be able to visualize my table before buying it, as I won't have the time nor the tools to do it on the go.
+I love to over-engineer things. And this won't be an exception. I wanted to be able to visualize my table before building it, as I won't have the time nor the tools to do it on the go.
 
 I already used OnShape to design the interior of my van last year. So I did it once again using OnShape [here](https://cad.onshape.com/documents/8171312ce72d812973c70b8c/w/d53a36f166bb3e6f1d7af718/e/da262f7bb9fe5ba8ab63cd80) :
 
@@ -101,11 +101,11 @@ I already used OnShape to design the interior of my van last year. So I did it o
 
 Basically, you can :
 
-1. Change the `vHelpers/Variables` to adjust size of your structure.
+1. Change the `Helpers/Variables` to adjust size of your structure.
 2. Go to `Create version` and use the `Update all drawings` button.
 3. Use the `Drawings/` files to build your own table.
 
-The chain size wasn't done in OnShape. If someone wants t do it, it'll be amazing I'm sure.
+The chain size wasn't done in OnShape. If someone wants to do it, it would be amazing, I'm sure.
 
 Otherwise, just use the `Show measure details` tool to measure between two eye straps and take a chain that would fit !
 
