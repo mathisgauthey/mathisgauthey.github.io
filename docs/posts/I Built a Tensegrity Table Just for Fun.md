@@ -1,7 +1,7 @@
 ---
 title: I Built a Tensegrity Table Just for Fun
 aliases: 
-description: 
+description: I built a tensegrity table just for fun, and share my experience with everyone.
 authors:
   - Mathis Gauthey
 categories:
@@ -10,8 +10,8 @@ tags:
   - CAD
   - wood-working
 date:
-  created: 2024-02-14T11:36:00+01:00
-  updated: 2024-03-23T17:37:23+01:00
+  created: 2024-03-22T16:00:00+01:00
+  updated: 2024-03-23T17:41:19+01:00
 share: true
 comments: true
 ---
