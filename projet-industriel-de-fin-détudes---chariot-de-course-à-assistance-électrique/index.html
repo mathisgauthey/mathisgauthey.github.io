@@ -1593,12 +1593,12 @@
   
 
 
-<h1 id="projet-industriel-de-fin-detudes-chariot-de-course-a-assistance-electrique">Projet Industriel De Fin D'études - Chariot De Course À Assistance Électrique</h1>
+<h1 id="projet-industriel-de-fin-detudes-chariot-de-course-a-assistance-electrique">Projet Industriel De Fin D'études - Chariot De Course À Assistance Électrique<a class="headerlink" href="#projet-industriel-de-fin-detudes-chariot-de-course-a-assistance-electrique" title="Permanent link">&para;</a></h1>
 <p>Je décris ici mon projet industriel de fin d'études réalisé à Polytech Lyon, la conception d'un chariot de course à assistance électrique.</p>
 <!-- more -->
 
 <p><em>Ce document contient des extraits de notre soutenance finale.</em></p>
-<h2 id="introduction">Introduction</h2>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>Équiper un chariot de courses d’un système d'assistance électrique pour aider au déplacement sur le plat et au franchissement de trottoirs et d'escaliers.</p>
 </blockquote>
@@ -1606,7 +1606,7 @@
 <p><img alt="2023-10-10_16-15-48_etapes_projet_industriel.png" src="../images/2023-10-10_16-15-48_etapes_projet_industriel.png" /></p>
 <p>Pour suivre l'avancement des différentes phases du projet, nous avons utilisé le logiciel Jira et son affichage Gantt.</p>
 <p><img alt="2023-10-10_16-18-26_jira_gantt.png" src="../images/2023-10-10_16-18-26_jira_gantt.png" /></p>
-<h2 id="etablissement-du-cahier-des-charges-fonctionnel">Etablissement Du Cahier Des Charges Fonctionnel</h2>
+<h2 id="etablissement-du-cahier-des-charges-fonctionnel">Etablissement Du Cahier Des Charges Fonctionnel<a class="headerlink" href="#etablissement-du-cahier-des-charges-fonctionnel" title="Permanent link">&para;</a></h2>
 <p>Nos objectifs ont été les suivants :</p>
 <ul>
 <li>✅ Assistance sur le plat</li>
@@ -1614,22 +1614,22 @@
 <li>✅ Assistance franchissement escalier</li>
 <li>❌ Assistance franchissement escalier en colimaçon</li>
 </ul>
-<h2 id="recherche-de-solutions-existantes">Recherche De Solutions Existantes</h2>
+<h2 id="recherche-de-solutions-existantes">Recherche De Solutions Existantes<a class="headerlink" href="#recherche-de-solutions-existantes" title="Permanent link">&para;</a></h2>
 <p>Nous avons envisagé plusieurs solutions techniques lors de nos recherches documentaires.</p>
-<h3 id="systeme-a-piston">Système À Piston</h3>
+<h3 id="systeme-a-piston">Système À Piston<a class="headerlink" href="#systeme-a-piston" title="Permanent link">&para;</a></h3>
 <p>Une première piste que nous avons envisagé fut d'utiliser un système de vérin poussoir soulevant le chariot à deux roues (éventuellement motorisées) au-dessus de la marche.</p>
 <p><img alt="2023-10-10_16-21-56_schema_piston.png" src="../images/2023-10-10_16-21-56_schema_piston.png" /></p>
-<h3 id="systeme-a-crochet">Système À Crochet</h3>
+<h3 id="systeme-a-crochet">Système À Crochet<a class="headerlink" href="#systeme-a-crochet" title="Permanent link">&para;</a></h3>
 <p>Une seconde piste que nous avons envisagé fut d'utiliser un système de crochet tracteur soulevant le chariot à deux roues (éventuellement motorisées) au-dessus de la marche.</p>
 <p><img alt="2023-10-10_16-22-53_systeme_crochet.png" src="../images/2023-10-10_16-22-53_systeme_crochet.png" /></p>
-<h3 id="systeme-a-trois-roues">Système À Trois Roues</h3>
+<h3 id="systeme-a-trois-roues">Système À Trois Roues<a class="headerlink" href="#systeme-a-trois-roues" title="Permanent link">&para;</a></h3>
 <p>Une dernière piste que nous avons envisagé fut d'utiliser un système à 6 roues, avec des roues individuellement motorisées ou par transmission, et un couple appliqué sur l’axe entre les roues pour faire tourner le support des roues.</p>
 <p><img alt="2023-10-10_16-23-19_systeme_trois_roues.png" src="../images/2023-10-10_16-23-19_systeme_trois_roues.png" /></p>
-<h2 id="pre-etudes-des-solutions-sur-adams">Pré-études Des Solutions Sur Adams</h2>
+<h2 id="pre-etudes-des-solutions-sur-adams">Pré-études Des Solutions Sur Adams<a class="headerlink" href="#pre-etudes-des-solutions-sur-adams" title="Permanent link">&para;</a></h2>
 <p><img alt="2023-10-10_16-26-56_difficulte.png" src="../images/2023-10-10_16-26-56_difficulte.png" /></p>
 <p>Après plusieurs pré-études, les résultats les plus prometteurs en terme d'aide à la réduction des efforts pour l'utilisateur sont associées au modèle à 6 roues.</p>
 <p>En effet, l'accompagnement est beaucoup plus souple et sans à-coups, et le système permet un franchissement répété d'obstacle (comme un escalier) beaucoup plus rapide.</p>
-<h2 id="preciser-les-caracteristiques-techniques-a-laide-detudes-sur-adams">Préciser Les Caractéristiques Techniques À L'aide D'études Sur Adams</h2>
+<h2 id="preciser-les-caracteristiques-techniques-a-laide-detudes-sur-adams">Préciser Les Caractéristiques Techniques À L'aide D'études Sur Adams<a class="headerlink" href="#preciser-les-caracteristiques-techniques-a-laide-detudes-sur-adams" title="Permanent link">&para;</a></h2>
 <p>Nous avons donc par la suite utilisé les scripts d'optimisation d'Adams pour trouver les meilleures dimensions et masses afin de réduire les efforts de l'utilisateur. Nous avons ainsi joué notamment sur les dimensions des roues, du système 3 roues, la hauteur du chariot et son chargement afin de contrôler l'assistance quel que soit le niveau de charge.</p>
 <p><img alt="2023-10-10_16-31-53_pre-etudes_adams.png" src="../images/2023-10-10_16-31-53_pre-etudes_adams.png" /></p>
 <p>Ces études nous ont mené a définir notre cahier des charges techniques :</p>
@@ -1656,19 +1656,19 @@
 <li>Batterie : Batterie Lithium Iron Phosphate LIFEPO4 → 12.8V, 7.5Ah, 96Wh</li>
 <li>Système de commande : Bouton poussoir (franchissement) et molette A/R pour l’assistance sur le plat</li>
 </ul>
-<h2 id="modelisation-de-la-solution-retenue">Modélisation De La Solution Retenue</h2>
+<h2 id="modelisation-de-la-solution-retenue">Modélisation De La Solution Retenue<a class="headerlink" href="#modelisation-de-la-solution-retenue" title="Permanent link">&para;</a></h2>
 <p><img alt="2023-10-10_16-32-23_modelisation_3D.png" src="../images/2023-10-10_16-32-23_modelisation_3D.png" /></p>
-<h3 id="schema-cinematique">Schema Cinematique</h3>
+<h3 id="schema-cinematique">Schema Cinematique<a class="headerlink" href="#schema-cinematique" title="Permanent link">&para;</a></h3>
 <p><img alt="2023-10-10_16-38-23_schema_cinematique.png" src="../images/2023-10-10_16-38-23_schema_cinematique.png" /></p>
-<h3 id="motorisation">Motorisation</h3>
+<h3 id="motorisation">Motorisation<a class="headerlink" href="#motorisation" title="Permanent link">&para;</a></h3>
 <p><img alt="2023-10-10_16-38-49_motorisation.png" src="../images/2023-10-10_16-38-49_motorisation.png" /></p>
-<h3 id="chaine-de-transmission-et-embrayage">Chaine De Transmission Et Embrayage</h3>
+<h3 id="chaine-de-transmission-et-embrayage">Chaine De Transmission Et Embrayage<a class="headerlink" href="#chaine-de-transmission-et-embrayage" title="Permanent link">&para;</a></h3>
 <p><img alt="2023-10-10_16-39-05_transmission_embrayage.png" src="../images/2023-10-10_16-39-05_transmission_embrayage.png" /></p>
-<h3 id="batterie-et-passage-de-cables-en-rotation">Batterie Et Passage De Cables En Rotation</h3>
+<h3 id="batterie-et-passage-de-cables-en-rotation">Batterie Et Passage De Cables En Rotation<a class="headerlink" href="#batterie-et-passage-de-cables-en-rotation" title="Permanent link">&para;</a></h3>
 <p><img alt="2023-10-10_16-39-24_batterie_cables.png" src="../images/2023-10-10_16-39-24_batterie_cables.png" /></p>
-<h3 id="commande-assistance">Commande Assistance</h3>
+<h3 id="commande-assistance">Commande Assistance<a class="headerlink" href="#commande-assistance" title="Permanent link">&para;</a></h3>
 <p><img alt="2023-10-10_16-39-41_commande_assistance.png" src="../images/2023-10-10_16-39-41_commande_assistance.png" /></p>
-<h2 id="test-de-validation-sur-adams-avec-le-modele-cao-puis-prototypage">Test De Validation Sur Adams Avec Le Modèle CAO Puis Prototypage</h2>
+<h2 id="test-de-validation-sur-adams-avec-le-modele-cao-puis-prototypage">Test De Validation Sur Adams Avec Le Modèle CAO Puis Prototypage<a class="headerlink" href="#test-de-validation-sur-adams-avec-le-modele-cao-puis-prototypage" title="Permanent link">&para;</a></h2>
 <p>Enfin, nous avons utilisé les caractéristiques techniques finales du modèle pour valider nos modélisation et analyser les efforts subit par l'utilisation avec ou sans les diverses assistances activées ou non.</p>
 <p><img alt="2023-10-10_16-29-51_adams_rotation_roues_seules.png" src="../images/2023-10-10_16-29-51_adams_rotation_roues_seules.png" /></p>
 <p><img alt="2023-10-10_16-30-21_adams_assistance_rotation_seule.png" src="../images/2023-10-10_16-30-21_adams_assistance_rotation_seule.png" /></p>

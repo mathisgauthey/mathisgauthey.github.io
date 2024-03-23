@@ -1509,11 +1509,11 @@
   
 
 
-<h1 id="how-to-use-obsidian-git-sync-on-android">How to Use Obsidian Git Sync on Android</h1>
+<h1 id="how-to-use-obsidian-git-sync-on-android">How to Use Obsidian Git Sync on Android<a class="headerlink" href="#how-to-use-obsidian-git-sync-on-android" title="Permanent link">&para;</a></h1>
 <p>On this post, I'll show how to sync your obsidian vault on obsidian start-up using tasker on your android phone.</p>
 <!-- more -->
 
-<h2 id="inspirations">Inspirations</h2>
+<h2 id="inspirations">Inspirations<a class="headerlink" href="#inspirations" title="Permanent link">&para;</a></h2>
 <ul>
 <li>My <a href="../using-git-to-sync-your-obsidian-vault-on-android-devices/">old guide</a> using cron jobs with time intervals instead of tasker</li>
 <li><a href="https://www.reddit.com/r/ObsidianMD/comments/v6otbu/how_to_sync_your_obsidian_vault_on_mobile_using/">How to sync your obsidian vault on mobile using git</a></li>
@@ -1521,7 +1521,7 @@
 <li><a href="https://gist.github.com/yuvve/013977d93ddc3b0c4780de950ba53d89">Automatically sync notes to and from git repository whenever you open and close Obsidian on mobile. · GitHub</a></li>
 <li><a href="https://pulinagrawal.github.io/Obsidian-Sync-Alternative/">Obsidian Syncing Alternative (For Android and iOS) | Obsidian-Sync-Alternative</a></li>
 </ul>
-<h2 id="install-the-required-tools">Install the Required Tools</h2>
+<h2 id="install-the-required-tools">Install the Required Tools<a class="headerlink" href="#install-the-required-tools" title="Permanent link">&para;</a></h2>
 <p>Install <a href="https://tasker.joaoapps.com/download.html">Tasker</a> from the official website (7 days trial) or from the Google Play Store (~3.5€).</p>
 <p>Install <a href="https://f-droid.org/en/packages/com.termux/">Termux</a>, <a href="https://f-droid.org/en/packages/com.termux.widget/">Termux Widget</a>, <a href="https://f-droid.org/packages/com.termux.tasker/">Termux Tasker</a> on F-droid or on the official Termux Github repository.</p>
 <div class="admonition warning">
@@ -1531,7 +1531,7 @@
 <p>Give Termux access to your storage using the following command :</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>termux-setup-storage
 </span></code></pre></div>
-<h2 id="setup-git-and-github-for-manipulating-repositories">Setup Git and Github for Manipulating Repositories</h2>
+<h2 id="setup-git-and-github-for-manipulating-repositories">Setup Git and Github for Manipulating Repositories<a class="headerlink" href="#setup-git-and-github-for-manipulating-repositories" title="Permanent link">&para;</a></h2>
 <p>Use the following commands to <a href="https://www.techrepublic.com/article/how-to-install-git-on-android/">setup git and github via HTTPS</a> :</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pkg update &amp;&amp; pkg upgrade
 </span></code></pre></div>
@@ -1564,7 +1564,7 @@
 <p class="admonition-title">Android 12 warning</p>
 <p>If you are on Android 12, you'll get an error with the command required to add the repository to a security list or something like that. Do it, and these commands should work.</p>
 </div>
-<h2 id="change-the-default-termux-working-directory">Change the Default Termux Working Directory</h2>
+<h2 id="change-the-default-termux-working-directory">Change the Default Termux Working Directory<a class="headerlink" href="#change-the-default-termux-working-directory" title="Permanent link">&para;</a></h2>
 <p>Edit the bashrc file :</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>nano /data/data/com.termux/files/usr/etc/bash.bashrc
 </span></code></pre></div>
@@ -1572,7 +1572,7 @@
 <div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>cd ~/storage/shared/Lifewiki
 </span></code></pre></div>
 <p>Restart your terminal, and you will find that it always opens up in your desired directory!</p>
-<h2 id="setup-tasker">Setup Tasker</h2>
+<h2 id="setup-tasker">Setup Tasker<a class="headerlink" href="#setup-tasker" title="Permanent link">&para;</a></h2>
 <p>Launch Tasker and do the basic setup (setting battery optimisation and stuff).</p>
 <div class="admonition success">
 <p class="admonition-title">Give Tasker some important Termux permissions</p>
@@ -1608,7 +1608,7 @@
 <p><img alt="2023-03-09_13-42-12_Tasker_Termux_backup_task.png" src="../images/2023-03-09_13-42-12_Tasker_Termux_backup_task.png" /></p>
 <p><img alt="2023-03-09_13-42-12_Tasker_Termux_stdout.png" src="../images/2023-03-09_13-42-12_Tasker_Termux_stdout.png" /></p>
 <p><img alt="2023-03-09_13-42-12_Tasker_Termux_stderr.png" src="../images/2023-03-09_13-42-12_Tasker_Termux_stderr.png" /></p>
-<h2 id="setup-the-error-handling-shortcut-for-merge-conflict">Setup the Error Handling Shortcut for Merge Conflict</h2>
+<h2 id="setup-the-error-handling-shortcut-for-merge-conflict">Setup the Error Handling Shortcut for Merge Conflict<a class="headerlink" href="#setup-the-error-handling-shortcut-for-merge-conflict" title="Permanent link">&para;</a></h2>
 <p>Create a directory for the shortcuts :</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/data/data/com.termux/files/home/.shortcuts
 </span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>chmod<span class="w"> </span><span class="m">700</span><span class="w"> </span>-R<span class="w"> </span>/data/data/com.termux/files/home/.shortcuts
@@ -1623,7 +1623,7 @@
 </span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>git<span class="w"> </span>reset<span class="w"> </span>--hard
 </span></code></pre></div>
 <p>Create the widget and add it to your home screen. That's it, you just need to launch it to solve merging errors.</p>
-<h2 id="setting-up-an-automatic-execution-of-the-script-not-recommended-if-you-want-to-avoid-merge-issues">Setting up an Automatic Execution of the Script (Not Recommended if You Want to Avoid Merge issues)</h2>
+<h2 id="setting-up-an-automatic-execution-of-the-script-not-recommended-if-you-want-to-avoid-merge-issues">Setting up an Automatic Execution of the Script (Not Recommended if You Want to Avoid Merge issues)<a class="headerlink" href="#setting-up-an-automatic-execution-of-the-script-not-recommended-if-you-want-to-avoid-merge-issues" title="Permanent link">&para;</a></h2>
 <p>If you want to automatically <strong>sync your vault every hour</strong>, for instance, you can do it using a <a href="https://ostechnix.com/a-beginners-guide-to-cron-jobs/">Cron job</a> (like described in this <a href="https://forum.obsidian.md/t/obsidian-github-integration-for-sync-and-version-control/6369">thread</a> or this <a href="https://www.reddit.com/r/ObsidianMD/comments/qep4gn/guide_obsidian_vault_github_sync_cron_on_termux/">one</a>).</p>
 <p>First, create the auto sync task folders :</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/data/data/com.termux/files/home/.shortcuts/tasks

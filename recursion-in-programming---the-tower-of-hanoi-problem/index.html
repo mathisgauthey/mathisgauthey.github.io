@@ -1485,11 +1485,11 @@
   
 
 
-<h1 id="recursion-in-programming-the-tower-of-hanoi-problem">Recursion in Programming - The Tower of Hanoi Problem</h1>
+<h1 id="recursion-in-programming-the-tower-of-hanoi-problem">Recursion in Programming - The Tower of Hanoi Problem<a class="headerlink" href="#recursion-in-programming-the-tower-of-hanoi-problem" title="Permanent link">&para;</a></h1>
 <p>Ever heard about recursion in programming ? Here's a common problem solved using recursion.</p>
 <!-- more -->
 
-<h2 id="introduction-what-is-the-tower-of-hanoi">Introduction : What is the Tower of Hanoi ?</h2>
+<h2 id="introduction-what-is-the-tower-of-hanoi">Introduction : What is the Tower of Hanoi ?<a class="headerlink" href="#introduction-what-is-the-tower-of-hanoi" title="Permanent link">&para;</a></h2>
 <p>The Tower of Hanoi is a mathematical game or puzzle consisting of three rods and a number of disks of various diameters, which can slide onto any rod. The puzzle begins with the disks stacked on one rod in order of decreasing size, the smallest at the top, thus approximating a conical shape. The objective of the puzzle is to move the entire stack to one of the other rods, obeying the following rules:</p>
 <ol>
 <li>Only one disk may be moved at a time.</li>
@@ -1498,7 +1498,7 @@
 </ol>
 <p>With three disks, the puzzle can be solved in <strong><u>seven moves</u></strong>.</p>
 <p>The minimal number of moves required to solve a Tower of Hanoi puzzle is <code>2n − 1</code>, where <code>n</code> is the number of disks.</p>
-<h2 id="how-to-solve-it-manually-with-three-disks">How to Solve it Manually with Three Disks ?</h2>
+<h2 id="how-to-solve-it-manually-with-three-disks">How to Solve it Manually with Three Disks ?<a class="headerlink" href="#how-to-solve-it-manually-with-three-disks" title="Permanent link">&para;</a></h2>
 <p><img alt="2023-12-07_11-50-07_hanoi_solving_steps_3_disks.png" src="../images/2023-12-07_11-50-07_hanoi_solving_steps_3_disks.png" /></p>
 <p>Source : <a href="https://www.geeksforgeeks.org/python-program-for-tower-of-hanoi/">Python Program for Tower of Hanoi - GeeksforGeeks</a></p>
 <p>Basically, with three disks, there is 7 steps. If we use the following notation <code>hanoiMove(source, auxilary, destination)</code>, we can further explain the steps :</p>
@@ -1511,7 +1511,7 @@
 <li>hanoiMove(<strong>B</strong>, A, <strong>C</strong>)</li>
 <li>hanoiMove(<strong>A</strong>, B, <strong>C</strong>)</li>
 </ol>
-<h2 id="how-to-get-the-idea-of-coding-such-a-thing">How to Get the Idea of Coding Such a Thing ?</h2>
+<h2 id="how-to-get-the-idea-of-coding-such-a-thing">How to Get the Idea of Coding Such a Thing ?<a class="headerlink" href="#how-to-get-the-idea-of-coding-such-a-thing" title="Permanent link">&para;</a></h2>
 <p>Do you know about recursion ? If not, now is your time to <a href="https://www.youtube.com/watch?v=IJDJ0kBx2LM">learn</a>. I also suggest taking a look at some <a href="https://betterprogramming.pub/5-basic-sorting-algorithms-you-must-know-9ef5b1f3949c">sorting algorithms</a> to grasp the idea of recursion and how to follow down a tree structure.</p>
 <p>Well, you got the moves in order for a basic scenario with 3 disks, that's what we discussed above.</p>
 <p>And here is a basic recursive template to navigate down a solution tree :</p>
@@ -1626,7 +1626,7 @@
 <p>And we want our third move to be :</p>
 <p><code>3. hanoiMove(**C**, A, **B**)</code>.</p>
 <p>Well, that settles it. The other recursive call should swap the <code>source</code> and <code>auxiliary</code> in the call.</p>
-<h2 id="solution-to-the-problem">Solution to the Problem</h2>
+<h2 id="solution-to-the-problem">Solution to the Problem<a class="headerlink" href="#solution-to-the-problem" title="Permanent link">&para;</a></h2>
 <p>Here's the whole code :</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">def</span> <span class="nf">hanoiMove</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">auxiliary</span><span class="p">,</span> <span class="n">destination</span><span class="p">,</span> <span class="n">hanoi_tower</span><span class="p">):</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="c1"># Base case, we just move the disk from the source to the destination</span>
@@ -1693,7 +1693,7 @@
 </span><span id="__span-6-32"><a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a>{&#39;A&#39;: [], &#39;B&#39;: [], &#39;C&#39;: [5, 4, 3, 2, 1]}
 </span></code></pre></div>
 <p>Welp, that's about it, I managed to make this work. Hope my explanation was clear enough.</p>
-<h2 id="additional-resources-that-could-help">Additional Resources That Could Help</h2>
+<h2 id="additional-resources-that-could-help">Additional Resources That Could Help<a class="headerlink" href="#additional-resources-that-could-help" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.geeksforgeeks.org/python-program-for-tower-of-hanoi/">Python Program for Tower of Hanoi - GeeksforGeeks</a></li>
 <li><a href="https://www.youtube.com/watch?v=rf6uf3jNjbo">Towers of Hanoi: A Complete Recursive Visualization - YouTube</a></li>

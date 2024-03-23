@@ -1509,19 +1509,19 @@
   
 
 
-<h1 id="obsidian-publish-alternative-how-to-one-click-upload-your-notes-on-your-own-website">Obsidian Publish Alternative, How to One-click Upload Your Notes on Your Own Website</h1>
+<h1 id="obsidian-publish-alternative-how-to-one-click-upload-your-notes-on-your-own-website">Obsidian Publish Alternative, How to One-click Upload Your Notes on Your Own Website<a class="headerlink" href="#obsidian-publish-alternative-how-to-one-click-upload-your-notes-on-your-own-website" title="Permanent link">&para;</a></h1>
 <p>In this post, I'll explain how I managed to publish my notes to my own website automatically, just like Obsidian-Publish would do.</p>
 <!-- more -->
 
 <p>This post is an extension of my <a href="../my-complete-obsidian-workflow-to-manage-my-life/">main post</a> showcase of my Obsidian workflow. You might want to check it out as well.</p>
-<h2 id="create-you-own-hugo-website">Create You Own Hugo Website</h2>
-<h3 id="prerequisites">Prerequisites</h3>
+<h2 id="create-you-own-hugo-website">Create You Own Hugo Website<a class="headerlink" href="#create-you-own-hugo-website" title="Permanent link">&para;</a></h2>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
 <p>I'll assume that you installed <a href="https://gohugo.io/getting-started/quick-start/">Hugo following their quick-start documentation</a> and <a href="https://git-scm.com/downloads">Git</a> on your computer, and that you know how to clone a repository from Github. If not, Google and Chat GPT are your friends here.</p>
-<h3 id="create-your-website-repository-on-github">Create Your Website Repository on Github</h3>
+<h3 id="create-your-website-repository-on-github">Create Your Website Repository on Github<a class="headerlink" href="#create-your-website-repository-on-github" title="Permanent link">&para;</a></h3>
 <p>First thing you need to do is to <a href="https://github.com/new">create your website repository on Github</a>.</p>
 <p>Name it <code>website_name.github.io</code> with <code>website_name</code> being your desired website name. (Thanks captain obvious).</p>
 <p>Don't forget to tick the <code>Add a README file</code>. It will prevent cloning an empty repository that will lead to issues if you're not comfortable with Git.</p>
-<h3 id="create-your-website-on-local">Create Your Website on Local</h3>
+<h3 id="create-your-website-on-local">Create Your Website on Local<a class="headerlink" href="#create-your-website-on-local" title="Permanent link">&para;</a></h3>
 <p>You'll now head to a folder of your choice on your computer.</p>
 <p>I'm simply using my <code>documents</code> folder inside my <code>home</code> in Ubuntu. But you might use <code>Documents</code> in Windows or anything else.</p>
 <p>Open a command prompt inside this folder. Using <a href="https://learn.microsoft.com/en-us/windows/terminal/install">Windows Terminal</a> you should be able to right click inside the <code>Documents</code> folder and select <code>Open in terminal</code>. Or use the <code>cd</code> command to navigate to the right folder. If you're a Linux user, I'll assume that you know what you are doing.</p>
@@ -1555,7 +1555,7 @@
 <p>Icons and avatar are saved inside the <code>assets</code> folder. Except for your website <code>favicon</code> that goes into the <code>static</code> folder.</p>
 <p>You will now come back to your <code>Documents</code> folder and git clone your previously created repository. You now have a <code>website_name</code> folder containing your Hugo site folder with the theme as a git submodule. And a <code>website_name.github.io</code> folder containing a <code>README.md</code> file.</p>
 <p>You just need to copy the <code>website_name</code> folder content inside your repository folder named <code>website_name.github.io</code>. And finally, commit and push !</p>
-<h3 id="configuring-the-github-pages-online-part">Configuring the Github Pages Online Part</h3>
+<h3 id="configuring-the-github-pages-online-part">Configuring the Github Pages Online Part<a class="headerlink" href="#configuring-the-github-pages-online-part" title="Permanent link">&para;</a></h3>
 <p>First, you need to go to your website settings and configure how the site is build.</p>
 <p><img alt="2023-08-02_19-45-36_github_page_config.png" src="../images/2023-08-02_19-45-36_github_page_config.png" /></p>
 <p>Then create a <code>.github</code> folder.</p>
@@ -1628,7 +1628,7 @@
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>                submodules: &#39;recursive&#39;
 </span></code></pre></div>
 <p>If you don't know much about Github workflows, just keep in mind that this is the part that will automatically build your site from your <code>main</code> branch on Github and deploy the <code>gh-pages</code> branch that is the built website.</p>
-<h3 id="configure-your-website">Configure Your Website</h3>
+<h3 id="configure-your-website">Configure Your Website<a class="headerlink" href="#configure-your-website" title="Permanent link">&para;</a></h3>
 <p>I honestly don't have the time nor the will to document every modification I made on my website. You have many options to learn how to do so :</p>
 <ul>
 <li>Explore my <a href="https://github.com/mathisgauthey/mathisgauthey.github.io/settings/pages">website repository and files</a></li>
@@ -1636,7 +1636,7 @@
 <li>Explore the <a href="https://stack.jimmycai.com/">hugo-theme-stack</a> documentations</li>
 </ul>
 <p>Basically, I changed and added some icons, added some left panel pages, and configured a comment section using <a href="https://giscus.app/">giscus</a>.</p>
-<h2 id="upload-content-to-your-website">Upload Content to Your Website</h2>
+<h2 id="upload-content-to-your-website">Upload Content to Your Website<a class="headerlink" href="#upload-content-to-your-website" title="Permanent link">&para;</a></h2>
 <p>You can simply change the <code>share</code> boolean to <code>true</code> in the note frontmatter, then select the command <code>Upload filename to DEFAULT</code> of the <a href="https://github.com/ObsidianPublisher/obsidian-github-publisher">obsidian-github-publisher</a> plugin from the note drop down menu. It will use some regex to convert wikilinks to standard Hugo links, commit and push to the relevant repository on Github, make a pull request that'll be automatically accepted, and then use some Github Actions to build your website.</p>
 <p>Attachments are automatically sent as well as linked notes as long as they have the <code>share</code> boolean set to <code>true</code> as well.</p>
 <p>The posts will be sent to the <code>content/post</code> folder and the attachments to the <code>content/images</code> folder.</p>

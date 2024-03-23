@@ -1473,24 +1473,24 @@
   
 
 
-<h1 id="oled-display-autohotkey-script-for-automatically-dimming-the-taskbar">OLED Display AutoHotkey Script for Automatically Dimming the Taskbar</h1>
+<h1 id="oled-display-autohotkey-script-for-automatically-dimming-the-taskbar">OLED Display AutoHotkey Script for Automatically Dimming the Taskbar<a class="headerlink" href="#oled-display-autohotkey-script-for-automatically-dimming-the-taskbar" title="Permanent link">&para;</a></h1>
 <p>If you have an OLED PC that you use for work, don't want burn-in but don't want to hide the taskbar either, here's a solution.</p>
 <!-- more -->
 
-<h2 id="goal">Goal</h2>
+<h2 id="goal">Goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Auto-dim the taskbar to prevent burn in.</li>
 <li>Keep the dimming when an app is opened in full-screen on a second monitor.</li>
 <li>Stop the dimming if an app is opened full-screen on the primary monitor.</li>
 </ol>
-<h2 id="sources">Sources</h2>
+<h2 id="sources">Sources<a class="headerlink" href="#sources" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Reddit source : <a href="https://www.reddit.com/r/OLED_Gaming/comments/sa6clj/screensaver_and_taskbar_dimmer_for_protecting/">Screensaver and taskbar dimmer for protecting OLED displays during Windows desktop and gaming usage scenarios : r/OLED_Gaming</a></li>
 <li>StackOverflow reference with script : <a href="https://superuser.com/a/1691664/1708452">How can I make icons in the Windows 10 taskbar/quicklaunch/tray darker to help prevent burn-in on my OLED display? - Super User</a></li>
 <li>Detecting full screen app to stop dimming : <a href="https://www.autohotkey.com/board/topic/38882-detect-fullscreen-application/">Detect Fullscreen application? - Ask for Help - AutoHotkey Community</a></li>
 <li>Detecting the screen the current window is on : <a href="https://www.autohotkey.com/board/topic/85457-detecting-the-screen-the-current-window-is-on/">Detecting the screen the current window is on - Ask for Help - AutoHotkey Community</a></li>
 </ul>
-<h2 id="script">Script</h2>
+<h2 id="script">Script<a class="headerlink" href="#script" title="Permanent link">&para;</a></h2>
 <div class="language-ahk highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">SysGet</span><span class="p">,</span> <span class="n">Monitor</span><span class="p">,</span> <span class="n">Monitor</span><span class="c1">                   ; Get monitor dimensions</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">SysGet</span><span class="p">,</span> <span class="n">WorkArea</span><span class="p">,</span> <span class="n">MonitorWorkArea</span><span class="c1">          ; Get monitor work-area without taskbar</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">dimtop</span> <span class="o">:=</span> <span class="o">%</span> <span class="n">WorkAreaBottom</span> <span class="o">+</span> <span class="mi">1</span><span class="c1">             ; taskbar is assumed to start below the work-area</span>

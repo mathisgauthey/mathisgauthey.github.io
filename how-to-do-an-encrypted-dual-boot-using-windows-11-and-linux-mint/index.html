@@ -1722,15 +1722,15 @@
   
 
 
-<h1 id="how-to-do-an-encrypted-dual-boot-using-windows-11-and-linux-mint">How to Do an Encrypted Dual Boot Using Windows 11 and Linux Mint</h1>
+<h1 id="how-to-do-an-encrypted-dual-boot-using-windows-11-and-linux-mint">How to Do an Encrypted Dual Boot Using Windows 11 and Linux Mint<a class="headerlink" href="#how-to-do-an-encrypted-dual-boot-using-windows-11-and-linux-mint" title="Permanent link">&para;</a></h1>
 <p>On this post, I'll provide a full guide on how to create an encrypted and independent dual boot setup using two drives.</p>
 <!-- more -->
 
-<h2 id="objective">Objective</h2>
+<h2 id="objective">Objective<a class="headerlink" href="#objective" title="Permanent link">&para;</a></h2>
 <p>Our goal is to create a completely independant encrypted dual boot setup for Linux Mint and Windows 11. How is it independant ? We'll make sure that GRUB (Linux Bootloader) will install itself on the Linux Drive, and won't be on your Windows drive with Windows Bootloader. That means you'll be able to remove any of the two drives and use them on any other machine you want.</p>
 <p>The setup will work as follow :</p>
 <p><img alt="2023-03-09_13-47-11_dual_boot_schema.png" src="../images/2023-03-09_13-47-11_dual_boot_schema.png" /></p>
-<h2 id="references">References</h2>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://itsfoss.com/dual-boot-ubuntu-windows-bitlocker/">Dual Booting Ubuntu With Windows 10 Pro With BitLocker Encryption - It's FOSS</a></li>
 <li><a href="https://superuser.com/questions/1287714/dual-boot-windows-linux-with-encryption">Dual boot Windows + Linux with encryption - Super User</a></li>
@@ -1739,8 +1739,8 @@
 <li><a href="https://forums.linuxmint.com/viewtopic.php?f=46&amp;t=375199&amp;p=2185321#p2185321">[SOLVED] Dual booting Mint on a second drive independently. - Linux Mint Forums</a></li>
 <li>Special thanks to AndyMH who helped me on Reddit, and kept helping me by mail and on the <a href="https://forums.linuxmint.com/index.php">Linux Mint Forums</a>.</li>
 </ul>
-<h2 id="before-doing-anything">Before Doing Anything</h2>
-<h3 id="requirement">Requirement</h3>
+<h2 id="before-doing-anything">Before Doing Anything<a class="headerlink" href="#before-doing-anything" title="Permanent link">&para;</a></h2>
+<h3 id="requirement">Requirement<a class="headerlink" href="#requirement" title="Permanent link">&para;</a></h3>
 <p>In order to follow this guide you need :</p>
 <ul>
 <li>Two drives (SSD<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> or HDD,<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> it doesn't matter at all). Verify that the second drive you just installed is recognized by Windows by opening the Windows File Explorer.</li>
@@ -1764,10 +1764,10 @@
 </li>
 <li>An internet connection might help (a lot).</li>
 </ul>
-<h3 id="backup">Backup</h3>
+<h3 id="backup">Backup<a class="headerlink" href="#backup" title="Permanent link">&para;</a></h3>
 <p>First, <strong>backup your computer</strong>. If you follow this guide, it could work. But it might as well fail, and you'll thank your past-self if you have a backup.</p>
 <p>I am personnaly using <a href="https://www.macrium.com/reflectfree">Macrium Software | Reflect Free Edition</a> and an eHDD (<em>external hard drive</em>) to create a full image backup in case things get messy. Whatever you choose to do, do a backup.</p>
-<h3 id="enable-and-disable-bitlocker-encryption-to-make-sure-it-works-well">Enable and Disable Bitlocker Encryption to Make Sure it Works Well</h3>
+<h3 id="enable-and-disable-bitlocker-encryption-to-make-sure-it-works-well">Enable and Disable Bitlocker Encryption to Make Sure it Works Well<a class="headerlink" href="#enable-and-disable-bitlocker-encryption-to-make-sure-it-works-well" title="Permanent link">&para;</a></h3>
 <p><strong>Before doing anything, we want to make sure that Bitlocker is working properly.</strong></p>
 <ul>
 <li>Search on Windows for "Manage Bitlocker".</li>
@@ -1786,8 +1786,8 @@
 <p>Make sure to turn if off completely. You don't want to just suspend encryption, you want to turn it off.</p>
 </blockquote>
 <p><u>Edit :</u> <em>As we will remove the Windows Drive (physically or by using some manipulation with Gparted), it should also work if you keep it Bitlocker encrypted. Or if it isn't yet encrypted. They should be completely independent anyway. But I'm a crazily paranoid man, that's why I'm putting it here.</em></p>
-<h2 id="setup-preparation">Setup Preparation</h2>
-<h3 id="preparing-your-windows-setup-for-the-dual-boot-experience">Preparing Your Windows Setup for the Dual Boot Experience</h3>
+<h2 id="setup-preparation">Setup Preparation<a class="headerlink" href="#setup-preparation" title="Permanent link">&para;</a></h2>
+<h3 id="preparing-your-windows-setup-for-the-dual-boot-experience">Preparing Your Windows Setup for the Dual Boot Experience<a class="headerlink" href="#preparing-your-windows-setup-for-the-dual-boot-experience" title="Permanent link">&para;</a></h3>
 <p>Windows has many things that could make your dual-boot setup goes wrong. That's why we'll make sure everything goes as smooth as possible by doing the following things :</p>
 <ul>
 <li>Remove <strong>fast-boot</strong> by going into the old alimentation settings of windows, choose actions when button pressed and remove fast boot, hibernate and (optional) sleep mode. Then, open a cmd as admin and type <code>powercfg -h off</code>. <em>Search for hiberfil.sys for additional information on how to deactivate fast-boot.</em></li>
@@ -1796,19 +1796,19 @@
 <li>Remove <strong>Intel Fast Start</strong> from Bios.</li>
 </ul>
 <p><em>I won't be explaining much moredependentis dependent on your system. Google will be your best friend, but don't hesitate to ask for help somewhere.</em></p>
-<h3 id="preparing-your-linux-mint-installation-medium">Preparing Your Linux Mint Installation Medium</h3>
+<h3 id="preparing-your-linux-mint-installation-medium">Preparing Your Linux Mint Installation Medium<a class="headerlink" href="#preparing-your-linux-mint-installation-medium" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Follow the instructions on the Linux Mint wiki and download the .iso (<a href="https://linuxmint-installation-guide.readthedocs.io/en/latest/choose.html">Choose the right edition—Linux Mint Installation Guide documentation</a>).</li>
 <li>Verify your ISO (integrity and authenticity : <a href="https://linuxmint-installation-guide.readthedocs.io/en/latest/verify.html">Verify your ISO image—Linux Mint Installation Guide documentation</a>).</li>
 <li>Create the bootable media with Etcher (<a href="https://linuxmint-installation-guide.readthedocs.io/en/latest/burn.html">Create the bootable media—Linux Mint Installation Guide documentation</a>).</li>
 </ul>
 <p>That's it. <strong>You're ready</strong>. Things are going to become interesting now.</p>
-<h2 id="beginning-the-dual-boot-process">Beginning the Dual-boot Process</h2>
+<h2 id="beginning-the-dual-boot-process">Beginning the Dual-boot Process<a class="headerlink" href="#beginning-the-dual-boot-process" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Shut down your laptop.</li>
 <li>Connect your USB key to the laptop and boot. It should go on Linux live by default, if not, change your boot order in your Bios.</li>
 </ul>
-<h3 id="windows-hard-drive-disconnection">Windows Hard-drive Disconnection</h3>
+<h3 id="windows-hard-drive-disconnection">Windows Hard-drive Disconnection<a class="headerlink" href="#windows-hard-drive-disconnection" title="Permanent link">&para;</a></h3>
 <p><em>In order to create a completely independent dual-boot setup, we want to disconnect the Windows Drive before doing the Linux Mint installation. If you can physically disconnect the drive, go on, do it, and skip the following Gparted part. If you're using a laptop and/or don't want to bother, read the following.</em></p>
 <ul>
 <li>Run Gparted by searching for it in the admin section of the applications. Find your Windows disk with 4 partitions (EFI, MS reserved, C:, and a recovery partition).</li>
@@ -1823,7 +1823,7 @@
 <li>The partition will now appear with the <strong>msftdata</strong> flag.</li>
 <li>Close Gparted.</li>
 </ul>
-<h3 id="installing-linux-mint">Installing Linux Mint</h3>
+<h3 id="installing-linux-mint">Installing Linux Mint<a class="headerlink" href="#installing-linux-mint" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Launch install Mint. Follow the instructions (<a href="https://linuxmint-installation-guide.readthedocs.io/en/latest/install.html">Install Linux Mint—Linux Mint Installation Guide documentation</a>). But <strong>be careful</strong>, you will need to click on "Continue testing" at the end of the installation process if you chose to disconnect the Windows Drive virtually using Gparted and flags.</li>
 </ul>
@@ -1844,8 +1844,8 @@
 </ul>
 <p>Now you should have a working dual-boot setup with Linux Mint encrypted. But wait a bit, we still need to encrypt Windows and change a few things.</p>
 <p>Oh, and don't forget to <strong>think about a backup for Linux Mint</strong>. You now have <strong>Macrium Reflect</strong> for Windows. There's <strong>Timeshift</strong> and <strong>Backintime</strong> that can help backing up your system files and personall files respectively.</p>
-<h2 id="after-installing-linux-mint-a-few-things-to-change">After Installing Linux Mint : A Few Things to Change</h2>
-<h3 id="a-beautiful-grub-menu">A Beautiful Grub Menu</h3>
+<h2 id="after-installing-linux-mint-a-few-things-to-change">After Installing Linux Mint : A Few Things to Change<a class="headerlink" href="#after-installing-linux-mint-a-few-things-to-change" title="Permanent link">&para;</a></h2>
+<h3 id="a-beautiful-grub-menu">A Beautiful Grub Menu<a class="headerlink" href="#a-beautiful-grub-menu" title="Permanent link">&para;</a></h3>
 <p>You want a beautiful Grub boot menu like that and not just a command line type of dual-boot screen ? Follow these instructions : <a href="https://linuxmint-user-guide.readthedocs.io/en/latest/grub.html">Grub Boot Menu — Linux Mint User Guide documentation</a></p>
 <p><img alt="2023-03-09_19-19-01_Grub_menu.png" src="../images/2023-03-09_19-19-01_Grub_menu.png" /></p>
 <p>Open a terminal, and type the following command :</p>
@@ -1855,7 +1855,7 @@
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>apt install --reinstall -o Dpkg::Options::=&quot;--force-confmiss&quot; grub2-theme-mint-2k
 </span></code></pre></div>
 <p>Don't forget to do a <code>sudo update-grub</code> afterward to update the Grub config file.</p>
-<h3 id="a-grub-menu-that-remembers-the-last-os-you-chose">A Grub Menu That Remembers the Last OS You Chose</h3>
+<h3 id="a-grub-menu-that-remembers-the-last-os-you-chose">A Grub Menu That Remembers the Last OS You Chose<a class="headerlink" href="#a-grub-menu-that-remembers-the-last-os-you-chose" title="Permanent link">&para;</a></h3>
 <p>Self-explicit.</p>
 <p>I followed <a href="https://askubuntu.com/users/30982/keepitsimpleengineer">keepitsimpleengineer</a>'s answer in this topic :</p>
 <blockquote>
@@ -1874,7 +1874,7 @@
 <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo update-grub
 </span></code></pre></div>
 <p>to update the system generated <code>grub.cfg</code> file in the <code>/boot/grub/</code> directory.</p>
-<h3 id="solve-timezone-issues-when-you-switch-os">Solve Timezone Issues When You Switch OS</h3>
+<h3 id="solve-timezone-issues-when-you-switch-os">Solve Timezone Issues When You Switch OS<a class="headerlink" href="#solve-timezone-issues-when-you-switch-os" title="Permanent link">&para;</a></h3>
 <p>If you <a href="https://itsfoss.com/install-ubuntu-1404-dual-boot-mode-windows-8-81-uefi/">dual boot Windows and Ubuntu</a> or any other Linux distribution, you might have noticed a time difference between the two operating systems.</p>
 <p>When you <a href="https://itsfoss.com/why-use-linux/">use Linux</a>, it shows the correct time. But when you boot into Windows, it shows the wrong time. Sometimes, it is the opposite and Linux shows the wrong time and Windows has the correct time.</p>
 <p>That’s strange specially because you are connected to the internet and your date and time is set to be used automatically.</p>
@@ -1885,30 +1885,30 @@
 <blockquote>
 <p><a href="https://itsfoss.com/wrong-time-dual-boot/">[Solved] Wrong Time in Windows 10 After Dual Boot With Linux</a></p>
 </blockquote>
-<h3 id="prepare-group-policies-for-windows-encryption">Prepare Group Policies for Windows Encryption</h3>
-<h3 id="allow-complexe-password-and-not-just-pin">Allow Complexe Password and Not Just Pin</h3>
+<h3 id="prepare-group-policies-for-windows-encryption">Prepare Group Policies for Windows Encryption<a class="headerlink" href="#prepare-group-policies-for-windows-encryption" title="Permanent link">&para;</a></h3>
+<h3 id="allow-complexe-password-and-not-just-pin">Allow Complexe Password and Not Just Pin<a class="headerlink" href="#allow-complexe-password-and-not-just-pin" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Open the Group Policy Editor (type <code>gpedit</code> after opening the start menu) and navigate to Administrative Templates &gt; Windows Components &gt; Bitlocker Drive Encryption &gt; Operating System Drives</li>
 <li>Enable "Allow enhanced PINS for startup" : Allows you to use a real password and not just numbers for your encryption.</li>
 </ul>
-<h3 id="add-a-password-at-startup">Add a Password at Startup</h3>
+<h3 id="add-a-password-at-startup">Add a Password at Startup<a class="headerlink" href="#add-a-password-at-startup" title="Permanent link">&para;</a></h3>
 <p>You can follow <a href="https://www.howtogeek.com/author/chrishoffman/">Chris Hoffman</a>'s guide entirely, as this is the one I used here :</p>
 <blockquote>
 <p><a href="https://www.howtogeek.com/262720/how-to-enable-a-pre-boot-bitlocker-pin-on-windows/">How to Enable a Pre-Boot BitLocker PIN on Windows</a></p>
 </blockquote>
-<h4 id="step-one-enable-bitlocker-if-you-havent-already">Step One: Enable BitLocker (If You Haven’t Already)</h4>
+<h4 id="step-one-enable-bitlocker-if-you-havent-already">Step One: Enable BitLocker (If You Haven’t Already)<a class="headerlink" href="#step-one-enable-bitlocker-if-you-havent-already" title="Permanent link">&para;</a></h4>
 <p><img alt="" src="https://www.howtogeek.com/wp-content/uploads/2016/07/img_5786ae1550c80.png?trim=1,1&amp;bg-color=000&amp;pad=1,1" /></p>
 <p>This is a BitLocker feature, so you have to use BitLocker encryption to set a pre-boot PIN. This is only available on Professional and Enterprise editions of Windows. Before you can set a PIN, you have to <a href="https://www.howtogeek.com/192894/how-to-set-up-bitlocker-encryption-on-windows/">enable BitLocker for your system drive</a>.</p>
 <p>Note that, if you go out of your way to <a href="https://www.howtogeek.com/howto/6229/how-to-use-bitlocker-on-drives-without-tpm/">enable BitLocker on a computer without a TPM</a>, you’ll be prompted to create a startup password that’s used instead of the TPM. The below steps are only necessary when enabling BitLocker on computers with TPMs, which <a href="https://www.howtogeek.com/237232/what-is-a-tpm-and-why-does-windows-need-one-for-disk-encryption/">most modern computers have</a>.</p>
 <p>If you have a Home version of Windows, you won’t be able to use BitLocker. You may have the <a href="https://www.howtogeek.com/173592/windows-8.1-will-start-encrypting-hard-drives-by-default-everything-you-need-to-know/">Device Encryption</a> feature instead, but this works differently from BitLocker and doesn’t allow you to provide a startup key.</p>
-<h4 id="step-two-enable-the-startup-pin-in-group-policy-editor">Step Two: Enable the Startup PIN in Group Policy Editor</h4>
+<h4 id="step-two-enable-the-startup-pin-in-group-policy-editor">Step Two: Enable the Startup PIN in Group Policy Editor<a class="headerlink" href="#step-two-enable-the-startup-pin-in-group-policy-editor" title="Permanent link">&para;</a></h4>
 <p>Once you’ve enabled BitLocker, you’ll need to go out of your way to enable a PIN with it. This requires a Group Policy settings change. To open the Group Policy Editor, press Windows+R, type “gpedit.msc” into the Run dialog, and press Enter.</p>
 <p>Head to Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; BitLocker Drive Encryption &gt; Operating System Drives in the Group Policy window.</p>
 <p>Double-click the “Require Additional Authentication at Startup” Option in the right pane.</p>
 <p><img alt="" src="https://www.howtogeek.com/wp-content/uploads/2016/07/img_5786abcd0a826.png?trim=1,1&amp;bg-color=000&amp;pad=1,1" /></p>
 <p>Select “Enabled” at the top of the window here. Then, click the box under “Configure TPM Startup PIN” and select the “Require Startup PIN With TPM” option. Click “OK” to save your changes.</p>
 <p><img alt="" src="https://www.howtogeek.com/wp-content/uploads/2016/07/img_5786abfab6c70.jpg?trim=1,1&amp;bg-color=000&amp;pad=1,1" /></p>
-<h4 id="step-three-add-a-pin-to-your-drive">Step Three: Add a PIN to Your Drive</h4>
+<h4 id="step-three-add-a-pin-to-your-drive">Step Three: Add a PIN to Your Drive<a class="headerlink" href="#step-three-add-a-pin-to-your-drive" title="Permanent link">&para;</a></h4>
 <p>You can now use the <code>manage-bde</code> command to add the PIN to your BitLocker-encrypted drive.</p>
 <p>To do this, launch a Command Prompt window as Administrator. On Windows 10 or 8, right-click the Start button and select “Command Prompt (Admin)”. On Windows 7, find the “Command Prompt” shortcut in the Start menu, right-click it, and select “Run as Administrator”</p>
 <p>Run the following command. The below command works on your C: drive, so if you want to require a startup key for another drive, enter its drive letter instead of <code>c:</code> .</p>
@@ -1924,14 +1924,14 @@
 </span></code></pre></div>
 <p>(The “Numerical Password” key protector displayed here is your recovery key.)</p>
 <p><img alt="" src="https://www.howtogeek.com/wp-content/uploads/2016/07/img_5786ad56af029.png?trim=1,1&amp;bg-color=000&amp;pad=1,1" /></p>
-<h4 id="how-to-change-your-bitlocker-pin">How to Change Your BitLocker PIN</h4>
+<h4 id="how-to-change-your-bitlocker-pin">How to Change Your BitLocker PIN<a class="headerlink" href="#how-to-change-your-bitlocker-pin" title="Permanent link">&para;</a></h4>
 <p>To change the PIN in the future, open a Command Prompt window as Administrator and run the following command:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>manage-bde -changepin c:
 </span></code></pre></div>
 <p>You’ll need to type and confirm your new PIN before continuing.</p>
 <p><img alt="2023-03-09_19-26-55_Change_PIN.png" src="../images/2023-03-09_19-26-55_Change_PIN.png" /></p>
 <p><img alt="" src="https://www.howtogeek.com/pagespeed_static/1.JiBnMqyl6S.gif" /></p>
-<h4 id="how-to-remove-the-pin-requirement">How to Remove the PIN Requirement</h4>
+<h4 id="how-to-remove-the-pin-requirement">How to Remove the PIN Requirement<a class="headerlink" href="#how-to-remove-the-pin-requirement" title="Permanent link">&para;</a></h4>
 <p>If you change your mind and want to stop using the PIN later, you can undo this change.</p>
 <p>First, you’ll need to head to the Group Policy window and change the option back to “Allow Startup PIN With TPM”. You can’t leave the option set to “Require Startup PIN With TPM” or Windows won’t allow you to remove the PIN.</p>
 <p><img alt="2023-03-09_19-26-55_Windows_TPM_and_PIN.png" src="../images/2023-03-09_19-26-55_Windows_TPM_and_PIN.png" /></p>
@@ -1948,7 +1948,7 @@
 <p><img alt="" src="https://www.howtogeek.com/pagespeed_static/1.JiBnMqyl6S.gif" /></p>
 <p><img alt="2023-03-09_19-26-55_bitlocker_protection_status.png" src="../images/2023-03-09_19-26-55_bitlocker_protection_status.png" /></p>
 <p>If you forget the PIN, you’ll need to provide the BitLocker recovery code you should have saved somewhere safe when you enabled BitLocker for your system drive.</p>
-<h3 id="prevent-bitlocker-from-asking-for-your-recovery-code-everytime-you-boot">Prevent Bitlocker From Asking for Your Recovery Code Everytime You Boot</h3>
+<h3 id="prevent-bitlocker-from-asking-for-your-recovery-code-everytime-you-boot">Prevent Bitlocker From Asking for Your Recovery Code Everytime You Boot<a class="headerlink" href="#prevent-bitlocker-from-asking-for-your-recovery-code-everytime-you-boot" title="Permanent link">&para;</a></h3>
 <p>Link to the answer by <a href="https://superuser.com/users/872535/ouk">ouk</a> :</p>
 <blockquote>
 <p><a href="https://superuser.com/questions/1278841/bitlocker-asking-for-protection-code-after-ubuntu-installation/1714144#1714144">windows 10 - BitLocker asking for protection code after Ubuntu installation - Super User</a></p>
@@ -1961,7 +1961,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="activate-bitlocker">Activate Bitlocker</h2>
+<h2 id="activate-bitlocker">Activate Bitlocker<a class="headerlink" href="#activate-bitlocker" title="Permanent link">&para;</a></h2>
 <p>Just turn on Bitlocker like before on your Windows drive, don't forget to save the recovery key because it will change, and that's it, you've done it.</p>
 <p>You can now be a proud encrypted dual-boot user. Tell it to your mom, it's quite uncommon for people to do it I guess.</p>
 <div class="footnote">

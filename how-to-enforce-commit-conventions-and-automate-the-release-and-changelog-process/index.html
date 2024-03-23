@@ -1542,11 +1542,11 @@
   
 
 
-<h1 id="how-to-enforce-commit-conventions-and-automate-the-release-and-changelog-process">How to Enforce Commit Conventions and Automate the Release and Changelog Process</h1>
+<h1 id="how-to-enforce-commit-conventions-and-automate-the-release-and-changelog-process">How to Enforce Commit Conventions and Automate the Release and Changelog Process<a class="headerlink" href="#how-to-enforce-commit-conventions-and-automate-the-release-and-changelog-process" title="Permanent link">&para;</a></h1>
 <p>In this post, I'll explain how to enforce conventional commits rules and automate the release and changelog process of a git repository.</p>
 <!-- more -->
 
-<h2 id="what-is-what">What is What ?</h2>
+<h2 id="what-is-what">What is What ?<a class="headerlink" href="#what-is-what" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://semver.org/">Semantic Versioning</a> is a simple set of rules and requirements that dictate how version numbers are assigned and incremented.</li>
 <li><a href="https://www.conventionalcommits.org/en/v1.0.0/">Conventional Commits</a> is a specification for adding human and machine readable meaning to commit messages. That's the one we'll use in every configuration here, it is close to the Angular specifications but has a few more types I reckon.</li>
@@ -1565,7 +1565,7 @@
 <li>style</li>
 <li>test</li>
 </ul>
-<h2 id="tools-well-use">Tools We'll Use</h2>
+<h2 id="tools-well-use">Tools We'll Use<a class="headerlink" href="#tools-well-use" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/semantic-release/semantic-release">semantic-release</a> to automate the release process and changelog based on the Semantic Versioning rules.</li>
 <li><a href="https://github.com/commitizen/cz-cli">commitizen</a> to add a prompt when commiting changes that will use conventional commits specifications.</li>
@@ -1573,13 +1573,13 @@
 <li><a href="https://github.com/conventional-changelog/conventional-changelog/tree/master">conventional-changelog</a> is also used for presets.</li>
 <li><a href="https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits">VS Code extension</a> for conventional commits modal.</li>
 </ul>
-<h2 id="requirements">Requirements</h2>
+<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../install-nvm-npm-yarn---setting-up-node-on-ubuntu/">Install Nvm, Npm, Yarn - Setting up Node on Ubuntu</a></li>
 <li>A git repository</li>
 </ul>
-<h2 id="configuration">Configuration</h2>
-<h3 id="semantic-release">Semantic Release</h3>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
+<h3 id="semantic-release">Semantic Release<a class="headerlink" href="#semantic-release" title="Permanent link">&para;</a></h3>
 <p>Go inside your git repository. Install the package locally using the following command :</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>npm<span class="w"> </span>install<span class="w"> </span>--save-dev<span class="w"> </span>semantic-release
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>npm<span class="w"> </span>install<span class="w"> </span>@semantic-release/commit-analyzer<span class="w"> </span>-D
@@ -1614,12 +1614,12 @@
 </span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>  ]
 </span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>}
 </span></code></pre></div>
-<h3 id="commitizen">Commitizen</h3>
+<h3 id="commitizen">Commitizen<a class="headerlink" href="#commitizen" title="Permanent link">&para;</a></h3>
 <p>Install globally using :</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>commitizen
 </span></code></pre></div>
 <p>Simply use <code>git cz</code> or just <code>cz</code> instead of <code>git commit</code> when committing. You can also use <code>git-cz</code>, which is an alias for <code>cz</code>. If you use npm 5.2+, you can also use <code>npx cz</code>.</p>
-<h3 id="commitlint">Commitlint</h3>
+<h3 id="commitlint">Commitlint<a class="headerlink" href="#commitlint" title="Permanent link">&para;</a></h3>
 <p>At the root of your project, execute the following commands :</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Install commitlint cli and conventional config</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>npm<span class="w"> </span>install<span class="w"> </span>--save-dev<span class="w"> </span>@commitlint/<span class="o">{</span>config-conventional,cli<span class="o">}</span>
@@ -1636,7 +1636,7 @@
 </span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="c1"># Add hook</span>
 </span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>npx<span class="w"> </span>husky<span class="w"> </span>add<span class="w"> </span>.husky/commit-msg<span class="w">  </span><span class="s1">&#39;npx --no -- commitlint --edit ${1}&#39;</span>
 </span></code></pre></div>
-<h3 id="vs-code-extension">VS Code Extension</h3>
+<h3 id="vs-code-extension">VS Code Extension<a class="headerlink" href="#vs-code-extension" title="Permanent link">&para;</a></h3>
 <p>It <a href="https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits">exists</a>. Simply install and use.</p>
 
 

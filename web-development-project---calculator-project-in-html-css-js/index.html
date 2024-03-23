@@ -1545,11 +1545,11 @@
   
 
 
-<h1 id="web-development-project-calculator-project-in-html-css-js">Web Development Project - Calculator Project in HTML, CSS, JS</h1>
+<h1 id="web-development-project-calculator-project-in-html-css-js">Web Development Project - Calculator Project in HTML, CSS, JS<a class="headerlink" href="#web-development-project-calculator-project-in-html-css-js" title="Permanent link">&para;</a></h1>
 <p>In this post, I'll showcase a small project to learn basic web development without any framework.</p>
 <!-- more -->
 
-<h2 id="introduction">Introduction</h2>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p>During my formation as a mechanical engineer, I learned how to use C, C++, Python, and Matlab. I also discovered Linux and Bash, parallel computing with MPI, and some scripting tools like Ansys APDL for mechanical engineering.</p>
 <p>Even though I manipulated and used a lot of CSS and JS during my Obsidian learning journey, I never really made any project using the three languages of web-dev.</p>
 <p>So after looking at some <a href="https://github.com/florinpop17/app-ideas/tree/master">project ideas</a> online, I settled on creating a <a href="https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Calculator-App.md">calculator app</a> while looking for a job.</p>
@@ -1557,8 +1557,8 @@
 <p>While it might not be the most beautiful one, I did exactly what I wanted to do with it.</p>
 <p>It is available online <a href="https://mathisgauthey.github.io/webCalculator/">here</a> and the source code is public on <a href="https://github.com/mathisgauthey/webCalculator">Github</a>.</p>
 <p>But how did it end up this way ? Well, let's find out.</p>
-<h2 id="chronology-of-dev">Chronology of Dev</h2>
-<h3 id="first-draft">First Draft</h3>
+<h2 id="chronology-of-dev">Chronology of Dev<a class="headerlink" href="#chronology-of-dev" title="Permanent link">&para;</a></h2>
+<h3 id="first-draft">First Draft<a class="headerlink" href="#first-draft" title="Permanent link">&para;</a></h3>
 <p>First of all, I did a bunch of spaghetti programing to grasp the basics :</p>
 <ol>
 <li>I learned how to organise HTML documents.</li>
@@ -1570,7 +1570,7 @@
 <li>I was doing things while learning by searching for things online. I lacked a structure and goals, I just did what I thought would be great to add.</li>
 <li>Debugging was manual, and I couldn't test that my changes were not breaking things.</li>
 </ul>
-<h3 id="rebuild-with-object-programming-and-unit-testing">Rebuild with Object Programming and Unit-testing</h3>
+<h3 id="rebuild-with-object-programming-and-unit-testing">Rebuild with Object Programming and Unit-testing<a class="headerlink" href="#rebuild-with-object-programming-and-unit-testing" title="Permanent link">&para;</a></h3>
 <p>Now that I knew the functions that I wanted to have on my calculator, I completely <a href="https://github.com/mathisgauthey/webCalculator/pull/1">rewritten</a> it using a <code>Calculator</code> class. It allowed me to use <a href="https://jestjs.io/">jest</a> to test the logic part of my app with some unit-testing that I learned on the <a href="https://openclassrooms.com/en/courses/5661466-use-testing-in-java-to-achieve-quality-applications">Openclassroom Java Unit-Testing Course</a>.</p>
 <p>I separated the my app in different parts :</p>
 <ul>
@@ -1581,14 +1581,14 @@
 <li><code>Calculator.test.js</code> for jest unit-testing.</li>
 </ul>
 <p>I could now use TDD<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> to make sure that adding functionalities wasn't breaking anything.</p>
-<h3 id="fixes-and-quality-of-life-improvement">Fixes and Quality of Life Improvement</h3>
+<h3 id="fixes-and-quality-of-life-improvement">Fixes and Quality of Life Improvement<a class="headerlink" href="#fixes-and-quality-of-life-improvement" title="Permanent link">&para;</a></h3>
 <p>Then I asked some people to try the calculator and I used it myself while comparing it to the calculator provided by Windows. I then planned a few bug fixes and quality of life improvements and integrated <a href="https://github.com/mathisgauthey/webCalculator/pull/2">them</a> to the app.</p>
-<h3 id="handling-big-numbers-and-loads-of-decimals">Handling Big Numbers and Loads of Decimals</h3>
+<h3 id="handling-big-numbers-and-loads-of-decimals">Handling Big Numbers and Loads of Decimals<a class="headerlink" href="#handling-big-numbers-and-loads-of-decimals" title="Permanent link">&para;</a></h3>
 <p>At first, my app was using the javascript <code>eval()</code> function. I know, I could do a parser myself, but the goal of this project was more to practice unit testing while discovering some web-dev, not to break my head against mathematical stuff.</p>
 <p>But still, how was my calculator handling numbers with loads of decimals ? Well, it was rounding up things badly.</p>
 <p>And how was my calculator endling big numbers ? Well, text overflowed.</p>
 <p>So I needed to fix things up, and I did.</p>
-<h4 id="how-to-handle-number-with-decimals">How to Handle Number with Decimals ?</h4>
+<h4 id="how-to-handle-number-with-decimals">How to Handle Number with Decimals ?<a class="headerlink" href="#how-to-handle-number-with-decimals" title="Permanent link">&para;</a></h4>
 <p>As always numbers in programming must be handled with care. Javascript numbers are treated using <a href="https://www.wikiwand.com/en/Decimal_floating_point">decimal floating point</a>. The issue of such a representation is that addition and other operations could end up with a small rounding error. While it was just a beginner project and the scope wasn't to get a scientific calculator, I still wanted to <strong>learn how to implement a library</strong> that would manage big numbers and numbers with loads of decimal precisely.</p>
 <p>So I added <a href="https://mathjs.org/">mathjs</a> to my <a href="https://github.com/mathisgauthey/webCalculator/pull/3">project</a>. It uses <a href="https://github.com/MikeMcl/decimal.js">decimal.js</a>.</p>
 <p>Here's a few other alternatives to consider :</p>
@@ -1603,9 +1603,9 @@
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>before : 0.1 + 0.2 = 0.30000000000000004
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>now : 0.1 + 0.2 = 0.3
 </span></code></pre></div>
-<h4 id="how-to-handle-big-numbers">How to Handle Big Numbers ?</h4>
+<h4 id="how-to-handle-big-numbers">How to Handle Big Numbers ?<a class="headerlink" href="#how-to-handle-big-numbers" title="Permanent link">&para;</a></h4>
 <p>Well, I simply limited the user input of numbers to 16 characters and added an overflow and slider to the formula accumulation at the top ! It made playing with huge numbers even more fun !</p>
-<h2 id="conclusion">Conclusion</h2>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
 <p>I learned a lot on that side project that occupied me just between sending email for jobs. It was fun, and I now understand web-dev much better.</p>
 <p>Most importantly, I learned that no project is too small to be entertaining. I had fun doing that small app, and I will definitely keep doing such projects !</p>
 <div class="footnote">
