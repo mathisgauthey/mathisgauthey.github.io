@@ -11,7 +11,7 @@ tags:
   - wood-working
 date:
   created: 2024-03-22T16:00:00+01:00
-  updated: 2024-03-23T23:49:05+01:00
+  updated: 2024-03-25T12:18:57+01:00
 share: true
 comments: true
 ---
@@ -281,6 +281,10 @@ It wobbles a bit, but not too much, this is due to the chains not being too tigh
 I'd trust my beer on it everyday. I even stayed on top of it, but wouldn't recommend it much.
 
 ![2024-03-23_17-27-45_tensegrity_table.jpg](../images/2024-03-23_17-27-45_tensegrity_table.jpg)
+
+If you wanted to know, yes it holds when I put it sideways 👀
+
+![2024-03-25_12-18-11_tensegrity_table_sideways.jpg](../images/2024-03-25_12-18-11_tensegrity_table_sideways.jpg)
 
 ## Conclusions and Mistakes I Won't Make Again
 
