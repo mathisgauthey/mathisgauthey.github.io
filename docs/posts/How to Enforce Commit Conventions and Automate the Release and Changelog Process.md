@@ -15,7 +15,7 @@ tags:
   - semantic-versioning
 date:
   created: 2024-01-18T08:25:00+01:00
-  updated: 2024-04-17T23:41:14+02:00
+  updated: 2024-04-23T19:02:45+02:00
 share: true
 comments: true
 ---
@@ -103,6 +103,8 @@ npm install conventional-changelog-conventionalcommits -D
 
 It should create a `package.json` and `package.lock` file in your repository. Don't forget to add `node_modules/` to your `.gitignore` file **but keep the other two committed as they manage the packages and packages dependencies versions respectively.**
 
+### Configuration
+
 Then, create a configuration file named `.releaserc` at the root of your repository. More on that [here](https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#configuration), but just copy and paste that for now :
 
 ```yml
@@ -110,10 +112,10 @@ Then, create a configuration file named `.releaserc` at the root of your reposit
     "branches": [
         "main"
     ],
-    "tagFormat": "${version}", # Because X.X.X is better than vX.X.X
-    "debug": true, # Output debugging information
-    "ci": true, # Allows for CI environment verifications
-    "dryRun": false, # Skip some part like the publishing, helps previewing changes first
+    "tagFormat": "${version}",
+    "debug": true,
+    "ci": true,
+    "dryRun": false,
     "plugins": [
         [
             "@semantic-release/commit-analyzer",
@@ -134,6 +136,12 @@ Then, create a configuration file named `.releaserc` at the root of your reposit
             }
         ],
         [
+            "@semantic-release/exec",
+            {
+                "prepareCmd": "bash prepare.sh '${nextRelease.version}' 'odoo_api_rest/__manifest__.py'"
+            }
+        ],
+        [
             "@semantic-release/git",
             {
                 "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
@@ -149,9 +157,62 @@ Then, create a configuration file named `.releaserc` at the root of your reposit
 > [!warning] Prevent infinite loops !
 > Note that the `[skip ci]` is only important when working on Azuredevops. Indeed, if your continuous integration system involves a trigger on main that will make semantic-release generate a commit on main… You can definitely see where this is going. Make sure not to do that.
 
+### Auto-increment the Version
+
+You might want to auto-increment your app version when you release it. It is possible to do it by using `semantic-release/exec` and execute a bash script like this one that replaces the version in the `__manifest__.py` file of a Odoo module :
+
+```bash
+#!/bin/bash
+
+# Get the next version from the first argument
+next_version=$1
+
+# Get the filename from the second argument
+filename=$2
+
+# Perform version bumping using sed
+sed -i -E "s/('version':\s*'[0-9]+\.[0-9]+\.)[0-9]+\.[0-9]+\.[0-9]+(',)/\1$next_version\2/" "$filename"
+```
+
 ### Launch Locally to Test it Out
 
 If you want to run the `semantic-release` locally, use `./node_modules/.bin/semantic-release --no-ci --dry-run`. If you're satisfied with the results, just get rid of the `--dry-run`, and it will create a release commit and tag **locally that you can then push if you like.**
+
+### Add Semantic-release to Your Continuous Integration & Deployment Solution
+
+If you want to automatically trigger a release when a new commit is detected on your main branch (that's only an example, you can fine tune it obviously), you can add it to your CI configurations. You can find [examples on the semantic-release repository](https://github.com/semantic-release/semantic-release/tree/master/docs/recipes/ci-configurations) for Github, Gitlab, Jenkins or Travis.
+
+If you happen to use AzureDevOps, first of all best of luck to you too, and feel free to use my simple template here :
+
+```yml
+name: Release
+
+trigger:
+- main
+
+pool:
+  name: default
+  demands: Agent.OS -equals Linux
+
+stages:
+- stage: Release
+  jobs:
+  - job : Install_semantic_release
+    steps:
+      - checkout: self
+        persistCredentials: true
+      - task: NodeTool@0
+        displayName: Use node v20
+        inputs:
+          versionSpec: '20.x'
+      - script: |
+          npm install
+          ./node_modules/.bin/semantic-release
+        env:
+          GIT_CREDENTIALS: $(System.AccessToken)
+```
+
+You can use a different agent, try using a Ubuntu LTS if possible. Don't forget to use the `GIT_CREDENTIALS` as they are required for semantic-release to be able to commit and push the release commit.
 
 ## Enforce Commit Conventions in Your Team
 
