@@ -15,7 +15,7 @@ tags:
   - semantic-versioning
 date:
   created: 2024-01-18T08:25:00+01:00
-  updated: 2024-04-23T19:02:45+02:00
+  updated: 2024-04-24T18:17:09+02:00
 share: true
 comments: true
 ---
@@ -126,7 +126,10 @@ Then, create a configuration file named `.releaserc` at the root of your reposit
         [
             "@semantic-release/release-notes-generator",
             {
-                "preset": "conventionalcommits"
+                "preset": "conventionalcommits",
+                "presetConfig": {
+                    "compareUrlFormat": "{{host}}/{{owner}}/{{repository}}/branchCompare?baseVersion=GT{{previousTag}}&targetVersion=GT{{currentTag}}&_a=files"
+                }
             }
         ],
         [
@@ -138,7 +141,7 @@ Then, create a configuration file named `.releaserc` at the root of your reposit
         [
             "@semantic-release/exec",
             {
-                "prepareCmd": "bash prepare.sh '${nextRelease.version}' 'odoo_api_rest/__manifest__.py'"
+                "prepareCmd": "bash prepare.sh '${nextRelease.version}' 'module/__manifest__.py'"
             }
         ],
         [
@@ -146,7 +149,8 @@ Then, create a configuration file named `.releaserc` at the root of your reposit
             {
                 "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
                 "assets": [
-                    "docs/CHANGELOG.md"
+                    "docs/CHANGELOG.md",
+                    "module/__manifest__.py"
                 ]
             }
         ]
@@ -156,6 +160,23 @@ Then, create a configuration file named `.releaserc` at the root of your reposit
 
 > [!warning] Prevent infinite loops !
 > Note that the `[skip ci]` is only important when working on Azuredevops. Indeed, if your continuous integration system involves a trigger on main that will make semantic-release generate a commit on main… You can definitely see where this is going. Make sure not to do that.
+
+Note that there are two ways to modify the `release-notes-generator` to your liking, and they both involves adding another key below `preset` in your config file.
+
+According to the plugin's [README](https://github.com/semantic-release/release-notes-generator) :
+
+> [!summary]
+> Note: config will be overwritten by the values of preset. You should use either preset or config, but not both.
+> Note: Individual properties of parserOpts and writerOpts will override ones loaded with an explicitly set preset or config. If preset or config are not set, only the properties set in parserOpts and writerOpts will be used.
+> Note: For presets that expects a configuration object, such as conventionalcommits, the presetConfig optionmust be set.
+
+So you can modify the settings :
+
+- Either add the `writerOpts` key and change the different [templates parts](https://github.com/conventional-changelog/conventional-changelog/blob/master/packages/conventional-changelog-conventionalcommits/src/writer.js) like `headerPartial` or `commitPartial`. Example can be found [here](https://github.com/semantic-release/semantic-release/issues/1339#issuecomment-548179389).
+- An easier and simpler modification, useful in case you just want to change the `compareUrlFormat` for example, is to use the `presetConfig` option. Example can be found [here](https://github.com/semantic-release/release-notes-generator/issues/131#issuecomment-627830409).
+
+> [!tip] But how to find the variable names and presets ?
+> The [semantic-release/release-notes-generator](https://github.com/semantic-release/release-notes-generator#options) is using [conventional-changelog presets](https://github.com/conventional-changelog/conventional-changelog/tree/c2c4b3a4cb60f784a4e7ee83d189b85c0acac960/packages) and you can check their [package repository](https://github.com/conventional-changelog/conventional-changelog/tree/c2c4b3a4cb60f784a4e7ee83d189b85c0acac960/packages/conventional-changelog-conventionalcommits) or [specs and documentation if provided](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md).
 
 ### Auto-increment the Version
 
@@ -173,6 +194,9 @@ filename=$2
 # Perform version bumping using sed
 sed -i -E "s/('version':\s*'[0-9]+\.[0-9]+\.)[0-9]+\.[0-9]+\.[0-9]+(',)/\1$next_version\2/" "$filename"
 ```
+
+> [!warning] Don't forget to commit these changes !
+> The files you modify using `exec` part of `semantic-release` needs to be added to the `assets` of the `git` plugin configuration. An example can be found in the [previous section](How%20to%20Enforce%20Commit%20Conventions%20and%20Automate%20the%20Release%20and%20Changelog%20Process.mdconfiguration)
 
 ### Launch Locally to Test it Out
 
