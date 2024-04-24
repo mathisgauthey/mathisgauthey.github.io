@@ -1534,7 +1534,7 @@
                       <li class="md-nav__item">
                         <div class="md-nav__link">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 13h1.5v2.82l2.44 1.41-.75 1.3L15 16.69V13m4-5H5v11h4.67c-.43-.91-.67-1.93-.67-3a7 7 0 0 1 7-7c1.07 0 2.09.24 3 .67V8M5 21a2 2 0 0 1-2-2V5c0-1.11.89-2 2-2h1V1h2v2h8V1h2v2h1a2 2 0 0 1 2 2v6.1c1.24 1.26 2 2.99 2 4.9a7 7 0 0 1-7 7c-1.91 0-3.64-.76-4.9-2H5m11-9.85A4.85 4.85 0 0 0 11.15 16c0 2.68 2.17 4.85 4.85 4.85A4.85 4.85 0 0 0 20.85 16c0-2.68-2.17-4.85-4.85-4.85Z"/></svg>
-                          <time datetime="2024-04-23 19:02:45+02:00" class="md-ellipsis">April 23, 2024</time>
+                          <time datetime="2024-04-24 18:17:09+02:00" class="md-ellipsis">April 24, 2024</time>
                         </div>
                       </li>
                     
@@ -1556,7 +1556,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
                           <span class="md-ellipsis">
                             
-                              6 min read
+                              7 min read
                             
                           </span>
                         </div>
@@ -1732,36 +1732,57 @@
 </span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>        [
 </span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>            &quot;@semantic-release/release-notes-generator&quot;,
 </span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>            {
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>                &quot;preset&quot;: &quot;conventionalcommits&quot;
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>            }
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>        ],
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>        [
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>            &quot;@semantic-release/changelog&quot;,
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>            {
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>                &quot;changelogFile&quot;: &quot;docs/CHANGELOG.md&quot;
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>            }
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>        ],
-</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>        [
-</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>            &quot;@semantic-release/exec&quot;,
-</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>            {
-</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>                &quot;prepareCmd&quot;: &quot;bash prepare.sh &#39;${nextRelease.version}&#39; &#39;odoo_api_rest/__manifest__.py&#39;&quot;
-</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>            }
-</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>        ],
-</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>        [
-</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>            &quot;@semantic-release/git&quot;,
-</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>            {
-</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>                &quot;message&quot;: &quot;chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}&quot;,
-</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>                &quot;assets&quot;: [
-</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>                    &quot;docs/CHANGELOG.md&quot;
-</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>                ]
-</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>            }
-</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>        ]
-</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>    ]
-</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>}
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>                &quot;preset&quot;: &quot;conventionalcommits&quot;,
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>                &quot;presetConfig&quot;: {
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>                    &quot;compareUrlFormat&quot;: &quot;{{host}}/{{owner}}/{{repository}}/branchCompare?baseVersion=GT{{previousTag}}&amp;targetVersion=GT{{currentTag}}&amp;_a=files&quot;
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>                }
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>            }
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>        ],
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>        [
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>            &quot;@semantic-release/changelog&quot;,
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>            {
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>                &quot;changelogFile&quot;: &quot;docs/CHANGELOG.md&quot;
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>            }
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>        ],
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>        [
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>            &quot;@semantic-release/exec&quot;,
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>            {
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>                &quot;prepareCmd&quot;: &quot;bash prepare.sh &#39;${nextRelease.version}&#39; &#39;module/__manifest__.py&#39;&quot;
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>            }
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>        ],
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>        [
+</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>            &quot;@semantic-release/git&quot;,
+</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>            {
+</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>                &quot;message&quot;: &quot;chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}&quot;,
+</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>                &quot;assets&quot;: [
+</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>                    &quot;docs/CHANGELOG.md&quot;,
+</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>                    &quot;module/__manifest__.py&quot;
+</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>                ]
+</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>            }
+</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>        ]
+</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>    ]
+</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>}
 </span></code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Prevent infinite loops !</p>
 <p>Note that the <code>[skip ci]</code> is only important when working on Azuredevops. Indeed, if your continuous integration system involves a trigger on main that will make semantic-release generate a commit on main… You can definitely see where this is going. Make sure not to do that.</p>
+</div>
+<p>Note that there are two ways to modify the <code>release-notes-generator</code> to your liking, and they both involves adding another key below <code>preset</code> in your config file.</p>
+<p>According to the plugin's <a href="https://github.com/semantic-release/release-notes-generator">README</a> :</p>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<p>Note: config will be overwritten by the values of preset. You should use either preset or config, but not both.<br />
+Note: Individual properties of parserOpts and writerOpts will override ones loaded with an explicitly set preset or config. If preset or config are not set, only the properties set in parserOpts and writerOpts will be used.<br />
+Note: For presets that expects a configuration object, such as conventionalcommits, the presetConfig optionmust be set.</p>
+</div>
+<p>So you can modify the settings :</p>
+<ul>
+<li>Either add the <code>writerOpts</code> key and change the different <a href="https://github.com/conventional-changelog/conventional-changelog/blob/master/packages/conventional-changelog-conventionalcommits/src/writer.js">templates parts</a> like <code>headerPartial</code> or <code>commitPartial</code>. Example can be found <a href="https://github.com/semantic-release/semantic-release/issues/1339#issuecomment-548179389">here</a>.</li>
+<li>An easier and simpler modification, useful in case you just want to change the <code>compareUrlFormat</code> for example, is to use the <code>presetConfig</code> option. Example can be found <a href="https://github.com/semantic-release/release-notes-generator/issues/131#issuecomment-627830409">here</a>.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">But how to find the variable names and presets ?</p>
+<p>The <a href="https://github.com/semantic-release/release-notes-generator#options">semantic-release/release-notes-generator</a> is using <a href="https://github.com/conventional-changelog/conventional-changelog/tree/c2c4b3a4cb60f784a4e7ee83d189b85c0acac960/packages">conventional-changelog presets</a> and you can check their <a href="https://github.com/conventional-changelog/conventional-changelog/tree/c2c4b3a4cb60f784a4e7ee83d189b85c0acac960/packages/conventional-changelog-conventionalcommits">package repository</a> or <a href="https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.2.0/README.md">specs and documentation if provided</a>.</p>
 </div>
 <h3 id="auto-increment-the-version">Auto-increment the Version<a class="headerlink" href="#auto-increment-the-version" title="Permanent link">&para;</a></h3>
 <p>You might want to auto-increment your app version when you release it. It is possible to do it by using <code>semantic-release/exec</code> and execute a bash script like this one that replaces the version in the <code>__manifest__.py</code> file of a Odoo module :</p>
@@ -1776,6 +1797,10 @@
 </span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c1"># Perform version bumping using sed</span>
 </span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>sed<span class="w"> </span>-i<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;s/(&#39;version&#39;:\s*&#39;[0-9]+\.[0-9]+\.)[0-9]+\.[0-9]+\.[0-9]+(&#39;,)/\1</span><span class="nv">$next_version</span><span class="s2">\2/&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$filename</span><span class="s2">&quot;</span>
 </span></code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Don't forget to commit these changes !</p>
+<p>The files you modify using <code>exec</code> part of <code>semantic-release</code> needs to be added to the <code>assets</code> of the <code>git</code> plugin configuration. An example can be found in the <a href="How%20to%20Enforce%20Commit%20Conventions%20and%20Automate%20the%20Release%20and%20Changelog%20Process.mdconfiguration">previous section</a></p>
+</div>
 <h3 id="launch-locally-to-test-it-out">Launch Locally to Test it Out<a class="headerlink" href="#launch-locally-to-test-it-out" title="Permanent link">&para;</a></h3>
 <p>If you want to run the <code>semantic-release</code> locally, use <code>./node_modules/.bin/semantic-release --no-ci --dry-run</code>. If you're satisfied with the results, just get rid of the <code>--dry-run</code>, and it will create a release commit and tag <strong>locally that you can then push if you like.</strong></p>
 <h3 id="add-semantic-release-to-your-continuous-integration-deployment-solution">Add Semantic-release to Your Continuous Integration &amp; Deployment Solution<a class="headerlink" href="#add-semantic-release-to-your-continuous-integration-deployment-solution" title="Permanent link">&para;</a></h3>
@@ -1879,7 +1904,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 23, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 24, 2024</span>
   </span>
 
     
