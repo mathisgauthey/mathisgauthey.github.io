@@ -196,7 +196,7 @@ sed -i -E "s/('version':\s*'[0-9]+\.[0-9]+\.)[0-9]+\.[0-9]+\.[0-9]+(',)/\1$next_
 ```
 
 > [!warning] Don't forget to commit these changes !
-> The files you modify using `exec` part of `semantic-release` needs to be added to the `assets` of the `git` plugin configuration. An example can be found in the [previous section](How%20to%20Enforce%20Commit%20Conventions%20and%20Automate%20the%20Release%20and%20Changelog%20Process.mdconfiguration)
+> The files you modify using `exec` part of `semantic-release` needs to be added to the `assets` of the `git` plugin configuration. An example can be found in the [previous section](How%2520to%2520Enforce%2520Commit%2520Conventions%2520and%2520Automate%2520the%2520Release%2520and%2520Changelog%2520Process.md#configuration).
 
 ### Launch Locally to Test it Out
 
