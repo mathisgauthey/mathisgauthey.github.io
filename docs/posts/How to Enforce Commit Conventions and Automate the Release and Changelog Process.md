@@ -15,7 +15,7 @@ tags:
   - semantic-versioning
 date:
   created: 2024-01-18T08:25:00+01:00
-  updated: 2024-04-24T18:17:09+02:00
+  updated: 2024-04-28T13:32:04+02:00
 share: true
 comments: true
 ---
@@ -196,7 +196,7 @@ sed -i -E "s/('version':\s*'[0-9]+\.[0-9]+\.)[0-9]+\.[0-9]+\.[0-9]+(',)/\1$next_
 ```
 
 > [!warning] Don't forget to commit these changes !
-> The files you modify using `exec` part of `semantic-release` needs to be added to the `assets` of the `git` plugin configuration. An example can be found in the [previous section](How%2520to%2520Enforce%2520Commit%2520Conventions%2520and%2520Automate%2520the%2520Release%2520and%2520Changelog%2520Process.md#configuration).
+> The files you modify using `exec` part of `semantic-release` needs to be added to the `assets` of the `git` plugin configuration. An example can be found in the `Configuration` section.
 
 ### Launch Locally to Test it Out
 
