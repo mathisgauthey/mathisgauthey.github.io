@@ -6,34 +6,32 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Welcome to my personal website. I showcase my projets and share my knowledge here.">
+        <meta name="description" content="How to install IntelliJ-IDEA inside WSL to get a complete Linux-Ubuntu dev environment on Windows.">
       
       
         <meta name="author" content="Mathis Gauthey">
       
       
-        <link rel="canonical" href="https://mathisgauthey.github.io/archive/2021/">
+        <link rel="canonical" href="https://mathisgauthey.github.io/installing-intellij-idea-on-wsl-for-a-complete-linux-ubuntu-dev-environment-on-windows/">
       
       
-        <link rel="prev" href="../2022/">
+        <link rel="prev" href="../how-to-sync-raindrop-and-omnivore-to-your-obsidian-vault/">
       
       
-        <link rel="next" href="../2020/">
       
-      
-      <link rel="icon" href="../../assets/favicon.ico">
+      <link rel="icon" href="../assets/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
-        <title>2021 - Mathis Gauthey's Website</title>
+        <title>Installing IntelliJ IDEA on WSL for a Complete Linux-Ubuntu Dev Environment on Windows - Mathis Gauthey's Website</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -71,11 +69,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="2021 - Mathis Gauthey's Website" >
+        <meta  property="og:title"  content="Installing IntelliJ IDEA on WSL for a Complete Linux-Ubuntu Dev Environment on Windows - Mathis Gauthey's Website" >
       
-        <meta  property="og:description"  content="Welcome to my personal website. I showcase my projets and share my knowledge here." >
+        <meta  property="og:description"  content="How to install IntelliJ-IDEA inside WSL to get a complete Linux-Ubuntu dev environment on Windows." >
       
-        <meta  property="og:image"  content="https://mathisgauthey.github.io/assets/images/social/archive/2021.png" >
+        <meta  property="og:image"  content="https://mathisgauthey.github.io/assets/images/social/posts/Installing IntelliJ IDEA on WSL for a Complete Linux-Ubuntu Dev Environment on Windows.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -83,15 +81,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://mathisgauthey.github.io/archive/2021/" >
+        <meta  property="og:url"  content="https://mathisgauthey.github.io/installing-intellij-idea-on-wsl-for-a-complete-linux-ubuntu-dev-environment-on-windows/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="2021 - Mathis Gauthey's Website" >
+        <meta  name="twitter:title"  content="Installing IntelliJ IDEA on WSL for a Complete Linux-Ubuntu Dev Environment on Windows - Mathis Gauthey's Website" >
       
-        <meta  name="twitter:description"  content="Welcome to my personal website. I showcase my projets and share my knowledge here." >
+        <meta  name="twitter:description"  content="How to install IntelliJ-IDEA inside WSL to get a complete Linux-Ubuntu dev environment on Windows." >
       
-        <meta  name="twitter:image"  content="https://mathisgauthey.github.io/assets/images/social/archive/2021.png" >
+        <meta  name="twitter:image"  content="https://mathisgauthey.github.io/assets/images/social/posts/Installing IntelliJ IDEA on WSL for a Complete Linux-Ubuntu Dev Environment on Windows.png" >
       
     
     
@@ -114,7 +112,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2021" class="md-skip">
+        <a href="#installing-intellij-idea-on-wsl-for-a-complete-linux-ubuntu-dev-environment-on-windows" class="md-skip">
           Skip to content
         </a>
       
@@ -130,7 +128,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Mathis Gauthey&#39;s Website" class="md-header__button md-logo" aria-label="Mathis Gauthey's Website" data-md-component="logo">
+    <a href=".." title="Mathis Gauthey&#39;s Website" class="md-header__button md-logo" aria-label="Mathis Gauthey's Website" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.3 6.74a.75.75 0 0 1-.04 1.06l-2.908 2.7 2.908 2.7a.75.75 0 1 1-1.02 1.1l-3.5-3.25a.75.75 0 0 1 0-1.1l3.5-3.25a.75.75 0 0 1 1.06.04Zm3.44 1.06a.75.75 0 1 1 1.02-1.1l3.5 3.25a.75.75 0 0 1 0 1.1l-3.5 3.25a.75.75 0 1 1-1.02-1.1l2.908-2.7-2.908-2.7Z"/><path d="M1.5 4.25c0-.966.784-1.75 1.75-1.75h17.5c.966 0 1.75.784 1.75 1.75v12.5a1.75 1.75 0 0 1-1.75 1.75h-9.69l-3.573 3.573A1.458 1.458 0 0 1 5 21.043V18.5H3.25a1.75 1.75 0 0 1-1.75-1.75ZM3.25 4a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h2.5a.75.75 0 0 1 .75.75v3.19l3.72-3.72a.749.749 0 0 1 .53-.22h10a.25.25 0 0 0 .25-.25V4.25a.25.25 0 0 0-.25-.25Z"/></svg>
@@ -150,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2021
+              Installing IntelliJ IDEA on WSL for a Complete Linux-Ubuntu Dev Environment on Windows
             
           </span>
         </div>
@@ -265,7 +263,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../.." class="md-tabs__link">
+        <a href=".." class="md-tabs__link">
           
   
     
@@ -285,7 +283,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../projects/" class="md-tabs__link">
+        <a href="../projects/" class="md-tabs__link">
           
   
     
@@ -305,7 +303,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../guides/" class="md-tabs__link">
+        <a href="../guides/" class="md-tabs__link">
           
   
     
@@ -325,7 +323,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../blog/" class="md-tabs__link">
+        <a href="../blog/" class="md-tabs__link">
           
   
     
@@ -345,7 +343,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../tags/" class="md-tabs__link">
+        <a href="../tags/" class="md-tabs__link">
           
   
     
@@ -365,7 +363,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../about/" class="md-tabs__link">
+        <a href="../about/" class="md-tabs__link">
           
   
     
@@ -385,7 +383,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../contact/" class="md-tabs__link">
+        <a href="../contact/" class="md-tabs__link">
           
   
     
@@ -405,7 +403,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../support/" class="md-tabs__link">
+        <a href="../support/" class="md-tabs__link">
           
   
     
@@ -435,7 +433,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -446,7 +446,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Mathis Gauthey&#39;s Website" class="md-nav__button md-logo" aria-label="Mathis Gauthey's Website" data-md-component="logo">
+    <a href=".." title="Mathis Gauthey&#39;s Website" class="md-nav__button md-logo" aria-label="Mathis Gauthey's Website" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.3 6.74a.75.75 0 0 1-.04 1.06l-2.908 2.7 2.908 2.7a.75.75 0 1 1-1.02 1.1l-3.5-3.25a.75.75 0 0 1 0-1.1l3.5-3.25a.75.75 0 0 1 1.06.04Zm3.44 1.06a.75.75 0 1 1 1.02-1.1l3.5 3.25a.75.75 0 0 1 0 1.1l-3.5 3.25a.75.75 0 1 1-1.02-1.1l2.908-2.7-2.908-2.7Z"/><path d="M1.5 4.25c0-.966.784-1.75 1.75-1.75h17.5c.966 0 1.75.784 1.75 1.75v12.5a1.75 1.75 0 0 1-1.75 1.75h-9.69l-3.573 3.573A1.458 1.458 0 0 1 5 21.043V18.5H3.25a1.75 1.75 0 0 1-1.75-1.75ZM3.25 4a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h2.5a.75.75 0 0 1 .75.75v3.19l3.72-3.72a.749.749 0 0 1 .53-.22h10a.25.25 0 0 0 .25-.25V4.25a.25.25 0 0 0-.25-.25Z"/></svg>
@@ -506,7 +506,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../.." class="md-nav__link ">
+            <a href=".." class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -536,10 +536,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -561,11 +559,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_2" >
         
           
           <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
@@ -579,7 +579,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_2">
             <span class="md-nav__icon md-icon"></span>
             Archive
@@ -595,7 +595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2024/" class="md-nav__link">
+      <a href="../archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -618,7 +618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2023/" class="md-nav__link">
+      <a href="../archive/2023/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -641,7 +641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2022/" class="md-nav__link">
+      <a href="../archive/2022/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -659,34 +659,12 @@
                 
   
   
-    
-  
   
     
-      
-    
   
   
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    2021
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../archive/2021/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -695,44 +673,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-stream-movies-and-shows-for-free" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to Stream Movies and Shows for Free
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-best-android-scanner-app-for-2021-in-my-opinion" class="md-nav__link">
-    <span class="md-ellipsis">
-      The Best Android Scanner App for 2021 in My Opinion
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -747,7 +687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2020/" class="md-nav__link">
+      <a href="../archive/2020/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -770,7 +710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2019/" class="md-nav__link">
+      <a href="../archive/2019/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -849,7 +789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/" class="md-nav__link">
+      <a href="../blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -872,7 +812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/" class="md-nav__link">
+      <a href="../guides/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -895,7 +835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../projects/" class="md-nav__link">
+      <a href="../projects/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -954,7 +894,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../projects/" class="md-nav__link ">
+            <a href="../projects/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1012,7 +952,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../guides/" class="md-nav__link ">
+            <a href="../guides/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1070,7 +1010,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../blog/" class="md-nav__link ">
+            <a href="../blog/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1128,7 +1068,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../tags/" class="md-nav__link ">
+            <a href="../tags/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1186,7 +1126,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../about/" class="md-nav__link ">
+            <a href="../about/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1244,7 +1184,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../contact/" class="md-nav__link ">
+            <a href="../contact/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1302,7 +1242,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../support/" class="md-nav__link ">
+            <a href="../support/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1338,6 +1278,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -1357,18 +1299,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-to-stream-movies-and-shows-for-free" class="md-nav__link">
+  <a href="#why-doing-this" class="md-nav__link">
     <span class="md-ellipsis">
-      How to Stream Movies and Shows for Free
+      Why Doing This
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-best-android-scanner-app-for-2021-in-my-opinion" class="md-nav__link">
+  <a href="#installing-intelj-idea-on-wsl" class="md-nav__link">
     <span class="md-ellipsis">
-      The Best Android Scanner App for 2021 in My Opinion
+      Installing IntelJ-IDEA on WSL
     </span>
   </a>
   
@@ -1383,118 +1325,325 @@
             
           
           
-  <div class="md-content" data-md-component="content">
-    <div class="md-content__inner">
-      <header class="md-typeset">
-        <h1 id="2021">2021<a class="headerlink" href="#2021" title="Permanent link">&para;</a></h1>
-      </header>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://github.com/mathisgauthey.png" alt="Mathis Gauthey">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2021-07-21 19:43:03+02:00">July 21, 2021</time></li>
-        
-          <li class="md-meta__item">
-            in
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href=".." class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
             
-              <a href="../../guides/" class="md-meta__link">guides</a></li>
-        
-        
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://github.com/mathisgauthey.png" alt="Mathis Gauthey">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          <a href="https://github.com/mathisgauthey">Mathis Gauthey</a>
+                        
+                      </strong>
+                      <br>
+                      Website Owner
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
+                        <time datetime="2024-06-09 09:40:00+02:00" class="md-ellipsis">June 9, 2024</time>
+                      </div>
+                    </li>
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 13h1.5v2.82l2.44 1.41-.75 1.3L15 16.69V13m4-5H5v11h4.67c-.43-.91-.67-1.93-.67-3a7 7 0 0 1 7-7c1.07 0 2.09.24 3 .67V8M5 21a2 2 0 0 1-2-2V5c0-1.11.89-2 2-2h1V1h2v2h8V1h2v2h1a2 2 0 0 1 2 2v6.1c1.24 1.26 2 2.99 2 4.9a7 7 0 0 1-7 7c-1.91 0-3.64-.76-4.9-2H5m11-9.85A4.85 4.85 0 0 0 11.15 16c0 2.68 2.17 4.85 4.85 4.85A4.85 4.85 0 0 0 20.85 16c0-2.68-2.17-4.85-4.85-4.85Z"/></svg>
+                          <time datetime="2024-06-09 23:06:04+02:00" class="md-ellipsis">June 9, 2024</time>
+                        </div>
+                      </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3H9m3 2 4 13 3-1-4-13-3 1M5 5v13h3V5H5M3 19v2h18v-2H3Z"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../guides/">guides</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              3 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+          </nav>
           
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-      </ul>
-      
+        </div>
+      </div>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="how-to-stream-movies-and-shows-for-free"><a class="toclink" href="../../how-to-stream-movies-and-shows-for-free/">How to Stream Movies and Shows for Free</a></h2>
-<p>If you want to stream movies and shows, you can use a paid streaming service, put back your old captain hat and sail the high seas, or use Stremio and get the best of both worlds.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../how-to-stream-movies-and-shows-for-free/">
-          Continue reading
-        </a>
-      </nav>
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://github.com/mathisgauthey.png" alt="Mathis Gauthey">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2021-01-05 07:41:25+01:00">January 5, 2021</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../guides/" class="md-meta__link">guides</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="the-best-android-scanner-app-for-2021-in-my-opinion"><a class="toclink" href="../../the-best-android-scanner-app-for-2021-in-my-opinion/">The Best Android Scanner App for 2021 in My Opinion</a></h2>
-<p>In this post, I'll explain what is the best android scanner app in 2021 based on my tests.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../the-best-android-scanner-app-for-2021-in-my-opinion/">
-          Continue reading
-        </a>
-      </nav>
-    
-  </div>
-</article>
-      
+    <article class="md-content__inner md-typeset">
       
         
-          
+  
+  
 
-
-
-<nav class="md-pagination">
+<nav class="md-tags" >
+  
+    
+    
+    
+      <a href="../tags/#wsl" class="md-tag">WSL</a>
+    
+  
+    
+    
+    
+      <a href="../tags/#intellij-idea" class="md-tag">IntelliJ-IDEA</a>
+    
+  
+    
+    
+    
+      <a href="../tags/#ubuntu" class="md-tag">Ubuntu</a>
+    
   
 </nav>
-        
+
+
+  
+    <a href="https://github.com/mathisgauthey/mathisgauthey.github.io/edit/main/docs/posts/Installing IntelliJ IDEA on WSL for a Complete Linux-Ubuntu Dev Environment on Windows.md" title="Edit this page" class="md-content__button md-icon">
       
-    </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/mathisgauthey/mathisgauthey.github.io/raw/main/docs/posts/Installing IntelliJ IDEA on WSL for a Complete Linux-Ubuntu Dev Environment on Windows.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
+    </a>
+  
+
+
+<h1 id="installing-intellij-idea-on-wsl-for-a-complete-linux-ubuntu-dev-environment-on-windows">Installing IntelliJ IDEA on WSL for a Complete Linux-Ubuntu Dev Environment on Windows<a class="headerlink" href="#installing-intellij-idea-on-wsl-for-a-complete-linux-ubuntu-dev-environment-on-windows" title="Permanent link">&para;</a></h1>
+<p>Tired of having to choose between VS Code which is just a text editor with good remote explorer capabilities for WSL and Docker, or Jetbrains full-blown IDEs with poor remote capabilities, forcing you to dev on Windows ?</p>
+<!-- more -->
+
+<h2 id="why-doing-this">Why Doing This<a class="headerlink" href="#why-doing-this" title="Permanent link">&para;</a></h2>
+<p>I was tired of :</p>
+<ul>
+<li>Using VS Code, which works damn well for remote development on WSL or Docker, but is just a text editor with loads of plugins. Refactoring capabilities are below average, and it lacks many specialized tools that I need to take alongside it (Bruno for HTTP requests, dBeaver for database explorations and scratchpad, etc)</li>
+<li>Using IntelliJ-IDEA on Windows works well, but Windows… No Bash without troubles, bad console logging output capabilities, always that damn dependency which required another Windows specific tooling, all in all it isn't great.</li>
+<li>Using IntelliJ-IDEA on Windows with Gateway to setup a remote back-end on WSL and, just like VS-Code, dev on WSL with an UI on Windows. The issue is that it is still heavily under development from Jetbrains teams, and it lacks Settings Sync support and settings are not well managed yet.</li>
+</ul>
+<h2 id="installing-intelj-idea-on-wsl">Installing IntelJ-IDEA on WSL<a class="headerlink" href="#installing-intelj-idea-on-wsl" title="Permanent link">&para;</a></h2>
+<p>Plain simple. It is heavily inspired by <a href="https://jsonobject.hashnode.dev/how-to-install-intellij-idea-in-ubuntu-on-wsl-with-x410">this guide</a>.</p>
+<p>First, go to the <a href="https://www.jetbrains.com/toolbox-app/download/download-thanks.html?platform=linux">Jetbrains Toolbox Linux AMD64 download page</a>, right click <code>direct link</code> and <code>Copy link</code>.</p>
+<p>Then, open your WSL terminal, go to <code>/home/usr/documents</code> (you might need to create the <code>documents</code> folder first).</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>libfuse2
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>wget<span class="w"> </span>https://download.jetbrains.com/toolbox/jetbrains-toolbox-2.3.2.31487.tar.gz
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>sudo<span class="w"> </span>tar<span class="w"> </span>-xzvf<span class="w"> </span>jetbrains-toolbox-2.3.2.31487.tar.gz
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>sudo<span class="w"> </span>./jetbrains-toolbox-2.3.2.31487/jetbrains-toolbox
+</span></code></pre></div>
+<p>Then it will launch Jetbrains-Toolbox :</p>
+<p><img alt="2024_06_09-10_00_15-jetbrains_toolbox.png" src="../images/2024_06_09-10_00_15-jetbrains_toolbox.png" /></p>
+<p>Simply install IntelliJ IDEA from here and launch it by clicking on it.</p>
+<p>You can, and should, activate <code>Settings Sync</code>.</p>
+<p>Change the Jetbrains passwords management as follows so that it saves Github, database and other credentials properly (I don't have an alternative yet, but it works) :</p>
+<p><img alt="2024_06_09-10_16_42-IntelliJ_IDEA_passwords.png" src="../images/2024_06_09-10_16_42-IntelliJ_IDEA_passwords.png" /></p>
+<p>And change your default browser (eg:<code>/mnt/c/Program Files/Mozilla Firefox/firefox.exe</code>) to use the one on Windows :</p>
+<p><img alt="2024_06_09-10_17_18-IntelliJ_IDEA_browser_default.png" src="../images/2024_06_09-10_17_18-IntelliJ_IDEA_browser_default.png" /></p>
+<p><em>Just make sure to have a browser on WSL as it might be required to auth on some Jetbrains plugin and it won't work with Windows broser. You'll need to copy paste links</em></p>
+<p>You can create aliases using <code>nano ~/.bash_aliases</code> :</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>alias toolbox=&quot;~/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox &gt; /dev/null 2&gt;&amp;1 &amp;&quot;
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>alias idea=&quot;~/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin/idea.sh &gt; /dev/null 2&gt;&amp;1 &amp;&quot;
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>alias idea.=&quot;~/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/bin/idea.sh . &gt; /dev/null 2&gt;&amp;1 &amp;&quot;
+</span></code></pre></div>
+<p>And, following <a href="https://granule.medium.com/wsl2-gui-app-shortcuts-in-windows-with-wslg-fcc66d3134e7">this guide</a>, you can create Windows shortcuts for your app.</p>
+<p>It appears that they (<code>.desktop</code> files) already exist within <code>\\wsl.localhost\Ubuntu\home\USENAME\.local\share\applications</code>, so simply copy and paste them to <code>\\wsl.localhost\Ubuntu\usr\share\applications</code>.</p>
+<p>You can use the command <code>sudo cp *jetbrains* /usr/share/applications</code> when inside <code>home\USERNAME\.local\share\applications</code> to do so.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 9, 2024</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 9, 2024</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+  
+
+
+  
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81Z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14Z"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              Thanks for your feedback! Help us improve this page by using our <a href="https://github.com/mathisgauthey/mathisgauthey.github.io/issues/new/?title=[Feedback]+Installing%20IntelliJ%20IDEA%20on%20WSL%20for%20a%20Complete%20Linux-Ubuntu%20Dev%20Environment%20on%20Windows+-+/installing-intellij-idea-on-wsl-for-a-complete-linux-ubuntu-dev-environment-on-windows/" target="_blank" rel="noopener">feedback form</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+<h2 id="__comments">Comments</h2>
+<!-- Insert generated snippet here -->
+<script
+    src="https://giscus.app/client.js"
+    data-repo="mathisgauthey/mathisgauthey.github.io"
+    data-repo-id="R_kgDOLOvRSA"
+    data-category="_"
+    data-category-id="DIC_kwDOLOvRSM4Cc_Uf"
+    data-mapping="title"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async
+></script>
+
+<!-- Synchronize Giscus theme with palette -->
+<script>
+    var giscus = document.querySelector("script[src*=giscus]");
+
+    // Set palette on initial load
+    var palette = __md_get("__palette");
+    if (palette && typeof palette.color === "object") {
+        var theme =
+            palette.color.scheme === "slate" ? "transparent_dark" : "light";
+
+        // Instruct Giscus to set theme
+        giscus.setAttribute("data-theme", theme);
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function () {
+        var ref = document.querySelector("[data-md-component=palette]");
+        ref.addEventListener("change", function () {
+            var palette = __md_get("__palette");
+            if (palette && typeof palette.color === "object") {
+                var theme =
+                    palette.color.scheme === "slate"
+                        ? "transparent_dark"
+                        : "light";
+
+                // Instruct Giscus to change theme
+                var frame = document.querySelector(".giscus-frame");
+                frame.contentWindow.postMessage(
+                    { giscus: { setConfig: { theme } } },
+                    "https://giscus.app"
+                );
+            }
+        });
+    });
+</script>
+
+      
+    </article>
   </div>
 
           
@@ -1513,10 +1662,12 @@
   
     
       
+        
+      
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../2022/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 2022">
+          <a href="../how-to-sync-raindrop-and-omnivore-to-your-obsidian-vault/" class="md-footer__link md-footer__link--prev" aria-label="Previous: How to Sync Raindrop and Omnivore to Your Obsidian Vault">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1526,27 +1677,11 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                2022
+                How to Sync Raindrop and Omnivore to Your Obsidian Vault
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../2020/" class="md-footer__link md-footer__link--next" aria-label="Next: 2020">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                2020
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
@@ -1603,10 +1738,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "content.code.copy", "navigation.indexes", "navigation.top", "navigation.expand", "content.action.view", "content.action.edit", "navigation.footer", "header.autohide"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "content.code.copy", "navigation.indexes", "navigation.top", "navigation.expand", "content.action.view", "content.action.edit", "navigation.footer", "header.autohide"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
   </body>
